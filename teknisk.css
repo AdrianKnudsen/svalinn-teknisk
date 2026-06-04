@@ -2561,17 +2561,6 @@ footer.foot {
   }
 }
 
-/* ============================================================
-   TWEAKS-DRIVEN OVERRIDES
-   ============================================================ */
-body[data-depth="enkel"] .deep {
-  display: none;
-}
-body[data-motion="off"] * {
-  animation: none !important;
-  transition: none !important;
-}
-
 /* ---------- section scroll-snap: each section's top gently "clicks" into
    place (proximity, so tall sections still scroll freely). Replaces the
    focus-dim approach — generous spacing keeps neighbours out of view. ---------- */

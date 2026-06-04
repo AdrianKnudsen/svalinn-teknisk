@@ -528,32 +528,10 @@
   })();
 
   /* ============================================================
-     TWEAKS host (motion / depth / accent) — applied via attrs
-     handled by tweaks-panel.jsx if present; expose helper
+     Load sentinel — lets the inline failsafe in the HTML detect
+     that this script loaded and ran successfully
      ============================================================ */
-  window.__svalinnApply = function (t) {
-    if (t.depth) document.body.dataset.depth = t.depth;
-    if (t.motion) document.body.dataset.motion = t.motion;
-    if (t.accent) {
-      document.documentElement.style.setProperty("--accent", t.accent);
-      // derive soft + line
-      document.documentElement.style.setProperty(
-        "--accent-soft",
-        hexA(t.accent, 0.14),
-      );
-      document.documentElement.style.setProperty(
-        "--accent-line",
-        hexA(t.accent, 0.34),
-      );
-    }
-  };
-  function hexA(hex, a) {
-    const h = hex.replace("#", "");
-    const r = parseInt(h.slice(0, 2), 16),
-      g = parseInt(h.slice(2, 4), 16),
-      b = parseInt(h.slice(4, 6), 16);
-    return `rgba(${r},${g},${b},${a})`;
-  }
+  window.__svalinnReady = true;
 
   /* ============================================================
      LEFT SCROLL TIMELINE — appears past hero, marks the journey
