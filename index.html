@@ -1,696 +1,2233 @@
 <!doctype html>
 <html lang="no">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Svalinn Technology — teknisk dypdykk</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="teknisk.css?v=55">
-</head>
-<body data-depth="full" data-motion="on">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Svalinn Technology — teknisk dypdykk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="teknisk.css?v=55" />
+  </head>
+  <body data-depth="full" data-motion="on">
+    <template id="__bundler_thumbnail">
+      <svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+        <rect width="1200" height="630" fill="#05101f" />
+        <rect width="1200" height="630" fill="url(#tg)" />
+        <defs>
+          <radialGradient id="tg" cx="78%" cy="-8%" r="90%">
+            <stop offset="0" stop-color="#0a3a60" />
+            <stop offset="1" stop-color="#05101f" stop-opacity="0" />
+          </radialGradient>
+          <linearGradient id="tm" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#47D7AC" />
+            <stop offset="1" stop-color="#008EAA" />
+          </linearGradient>
+        </defs>
+        <g
+          transform="translate(480,135) scale(15)"
+          fill="none"
+          stroke="url(#tm)"
+          stroke-width="1.5"
+          stroke-linejoin="round"
+          stroke-linecap="round"
+        >
+          <path
+            d="M9 4.5A3 3 0 0 0 6 7.5 3 3 0 0 0 4.5 13 3 3 0 0 0 7 18a3 3 0 0 0 5 1 3 3 0 0 0 5-1 3 3 0 0 0 2.5-5A3 3 0 0 0 18 7.5 3 3 0 0 0 15 4.5a3 3 0 0 0-6 0Z"
+          />
+          <path d="M12 4.5V19 M9 9 H6.4 M15 9 H17.6 M9.2 14 H7 M14.8 14 H17" />
+        </g>
+        <text
+          x="600"
+          y="560"
+          fill="#eef5fb"
+          font-family="Montserrat,sans-serif"
+          font-size="44"
+          font-weight="800"
+          text-anchor="middle"
+          letter-spacing="2"
+        >
+          SVALINN TECHNOLOGY
+        </text>
+      </svg>
+    </template>
 
-<template id="__bundler_thumbnail">
-  <svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
-    <rect width="1200" height="630" fill="#05101f"/>
-    <rect width="1200" height="630" fill="url(#tg)"/>
-    <defs>
-      <radialGradient id="tg" cx="78%" cy="-8%" r="90%"><stop offset="0" stop-color="#0a3a60"/><stop offset="1" stop-color="#05101f" stop-opacity="0"/></radialGradient>
-      <linearGradient id="tm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#47D7AC"/><stop offset="1" stop-color="#008EAA"/></linearGradient>
-    </defs>
-    <g transform="translate(480,135) scale(15)" fill="none" stroke="url(#tm)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round">
-      <path d="M9 4.5A3 3 0 0 0 6 7.5 3 3 0 0 0 4.5 13 3 3 0 0 0 7 18a3 3 0 0 0 5 1 3 3 0 0 0 5-1 3 3 0 0 0 2.5-5A3 3 0 0 0 18 7.5 3 3 0 0 0 15 4.5a3 3 0 0 0-6 0Z"/>
-      <path d="M12 4.5V19 M9 9 H6.4 M15 9 H17.6 M9.2 14 H7 M14.8 14 H17"/>
-    </g>
-    <text x="600" y="560" fill="#eef5fb" font-family="Montserrat,sans-serif" font-size="44" font-weight="800" text-anchor="middle" letter-spacing="2">SVALINN TECHNOLOGY</text>
-  </svg>
-</template>
+    <!-- ===================== ICON SPRITE ===================== -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <g id="ic-sun">
+          <circle
+            cx="12"
+            cy="12"
+            r="4.4"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          />
+          <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <line x1="12" y1="2.5" x2="12" y2="5" />
+            <line x1="12" y1="19" x2="12" y2="21.5" />
+            <line x1="2.5" y1="12" x2="5" y2="12" />
+            <line x1="19" y1="12" x2="21.5" y2="12" />
+            <line x1="5.2" y1="5.2" x2="7" y2="7" />
+            <line x1="17" y1="17" x2="18.8" y2="18.8" />
+            <line x1="18.8" y1="5.2" x2="17" y2="7" />
+            <line x1="7" y1="17" x2="5.2" y2="18.8" />
+          </g>
+        </g>
+        <g id="ic-moon">
+          <path
+            d="M20 14.5A8 8 0 1 1 10.5 4 6.3 6.3 0 0 0 20 14.5Z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g id="ic-solar">
+          <rect
+            x="3.5"
+            y="11"
+            width="17"
+            height="9"
+            rx="1"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          />
+          <g stroke="currentColor" stroke-width="1.4">
+            <line x1="9" y1="11" x2="7.6" y2="20" />
+            <line x1="14.6" y1="11" x2="13.2" y2="20" />
+            <line x1="4" y1="15.5" x2="20" y2="15.5" />
+          </g>
+          <g stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+            <line x1="12" y1="3" x2="12" y2="6" />
+            <line x1="7.5" y1="4.6" x2="8.7" y2="6.8" />
+            <line x1="16.5" y1="4.6" x2="15.3" y2="6.8" />
+          </g>
+        </g>
+        <g id="ic-grid">
+          <path
+            d="M12 3 L7 21 M12 3 L17 21 M9.5 9 L14.5 9 M8.4 13 L15.6 13 M7.5 17 L16.5 17 M5 21 L19 21"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g id="ic-price">
+          <polyline
+            points="3,17 8,11 12,14 20,5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <circle cx="20" cy="5" r="1.6" fill="currentColor" />
+          <path
+            d="M3 20 H20"
+            stroke="currentColor"
+            stroke-width="1.4"
+            stroke-linecap="round"
+          />
+        </g>
+        <g id="ic-power">
+          <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <line x1="5" y1="20" x2="5" y2="13" />
+            <line x1="10" y1="20" x2="10" y2="9" />
+            <line x1="15" y1="20" x2="15" y2="11" />
+            <line x1="20" y1="20" x2="20" y2="5" />
+          </g>
+        </g>
+        <g id="ic-battery">
+          <rect
+            x="3"
+            y="7"
+            width="16"
+            height="11"
+            rx="2"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          />
+          <rect
+            x="20"
+            y="10.5"
+            width="2.4"
+            height="4"
+            rx="1"
+            fill="currentColor"
+          />
+          <path
+            d="M11.5 9.5 L8.8 13.3 H11.2 L10 16"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g id="ic-chiller">
+          <rect
+            x="3.4"
+            y="5"
+            width="17.2"
+            height="14"
+            rx="2.4"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+          />
+          <circle
+            cx="12"
+            cy="11.4"
+            r="4.6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          />
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.4"
+            stroke-linecap="round"
+          >
+            <path d="M12 11.4c1.6-.9 2.6-2.4 2.2-4" />
+            <path d="M12 11.4c-1.9.1-3.5-.6-4.1-2.1" />
+            <path d="M12 11.4c.3 1.9-.1 3.5-1.7 4.3" />
+          </g>
+          <circle cx="12" cy="11.4" r="1" fill="currentColor" />
+          <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+            <line x1="6.6" y1="19" x2="6.6" y2="20.6" />
+            <line x1="17.4" y1="19" x2="17.4" y2="20.6" />
+          </g>
+        </g>
+        <g id="ic-snow">
+          <g stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+            <line x1="12" y1="3" x2="12" y2="21" />
+            <line x1="3.2" y1="7.5" x2="20.8" y2="16.5" />
+            <line x1="20.8" y1="7.5" x2="3.2" y2="16.5" />
+            <path
+              d="M12 3 9.6 5.4 M12 3 14.4 5.4 M12 21 9.6 18.6 M12 21 14.4 18.6"
+            />
+            <path
+              d="M3.2 7.5 3.6 10.4 M3.2 7.5 6.1 7.1 M20.8 16.5 20.4 13.6 M20.8 16.5 17.9 16.9 M20.8 7.5 17.9 7.1 M20.8 7.5 20.4 10.4 M3.2 16.5 6.1 16.9 M3.2 16.5 3.6 13.6"
+            />
+          </g>
+        </g>
+        <g id="ic-thermo">
+          <path
+            d="M14 13.2V5a2.5 2.5 0 0 0-5 0v8.2a4.2 4.2 0 1 0 5 0Z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linejoin="round"
+          />
+          <circle cx="11.5" cy="16.6" r="1.6" fill="currentColor" />
+        </g>
+        <g id="ic-cube">
+          <path
+            d="M12 3 21 7.5V16.5L12 21 3 16.5V7.5Z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M3 7.5 12 12 21 7.5 M12 12 V21"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g id="ic-automation">
+          <rect
+            x="6"
+            y="6"
+            width="12"
+            height="12"
+            rx="2"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+          />
+          <rect
+            x="9.5"
+            y="9.5"
+            width="5"
+            height="5"
+            rx="1"
+            fill="currentColor"
+          />
+          <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <line x1="9" y1="3.5" x2="9" y2="6" />
+            <line x1="15" y1="3.5" x2="15" y2="6" />
+            <line x1="9" y1="18" x2="9" y2="20.5" />
+            <line x1="15" y1="18" x2="15" y2="20.5" />
+            <line x1="3.5" y1="9" x2="6" y2="9" />
+            <line x1="3.5" y1="15" x2="6" y2="15" />
+            <line x1="18" y1="9" x2="20.5" y2="9" />
+            <line x1="18" y1="15" x2="20.5" y2="15" />
+          </g>
+        </g>
+        <g id="ic-building">
+          <rect
+            x="5"
+            y="3.5"
+            width="14"
+            height="17"
+            rx="1.5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          />
+          <g fill="currentColor">
+            <rect x="8" y="7" width="2.5" height="2.5" />
+            <rect x="13.5" y="7" width="2.5" height="2.5" />
+            <rect x="8" y="11.5" width="2.5" height="2.5" />
+            <rect x="13.5" y="11.5" width="2.5" height="2.5" />
+          </g>
+          <rect x="10.2" y="16" width="3.6" height="4.5" fill="currentColor" />
+        </g>
+        <g id="ic-brain">
+          <path
+            d="M9 4.5A3 3 0 0 0 6 7.5 3 3 0 0 0 4.5 13 3 3 0 0 0 7 18a3 3 0 0 0 5 1 3 3 0 0 0 5-1 3 3 0 0 0 2.5-5A3 3 0 0 0 18 7.5 3 3 0 0 0 15 4.5a3 3 0 0 0-6 0Z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M12 4.5V19 M9 9 H6.4 M15 9 H17.6 M9.2 14 H7 M14.8 14 H17"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.4"
+            stroke-linecap="round"
+          />
+        </g>
+        <g id="ic-collect">
+          <circle cx="12" cy="12" r="2.4" fill="currentColor" />
+          <g stroke="currentColor" stroke-width="1.5">
+            <line x1="12" y1="9.6" x2="12" y2="4" />
+            <line x1="12" y1="14.4" x2="12" y2="20" />
+            <line x1="9.9" y1="10.8" x2="5" y2="8" />
+            <line x1="14.1" y1="13.2" x2="19" y2="16" />
+            <line x1="9.9" y1="13.2" x2="5" y2="16" />
+            <line x1="14.1" y1="10.8" x2="19" y2="8" />
+          </g>
+          <g fill="currentColor">
+            <circle cx="12" cy="4" r="1.7" />
+            <circle cx="12" cy="20" r="1.7" />
+            <circle cx="5" cy="8" r="1.7" />
+            <circle cx="19" cy="8" r="1.7" />
+            <circle cx="5" cy="16" r="1.7" />
+            <circle cx="19" cy="16" r="1.7" />
+          </g>
+        </g>
+        <g id="ic-analyse">
+          <path
+            d="M4 19 H20"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+          />
+          <polyline
+            points="5,15 9,10 12.5,12.5 19,5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M16 5 H19 V8"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g id="ic-optimize">
+          <circle
+            cx="12"
+            cy="12"
+            r="3.2"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          />
+          <g stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+            <line x1="12" y1="3" x2="12" y2="6" />
+            <line x1="12" y1="18" x2="12" y2="21" />
+            <line x1="3" y1="12" x2="6" y2="12" />
+            <line x1="18" y1="12" x2="21" y2="12" />
+            <line x1="5.6" y1="5.6" x2="7.7" y2="7.7" />
+            <line x1="16.3" y1="16.3" x2="18.4" y2="18.4" />
+            <line x1="18.4" y1="5.6" x2="16.3" y2="7.7" />
+            <line x1="7.7" y1="16.3" x2="5.6" y2="18.4" />
+          </g>
+        </g>
+        <g id="ic-signal">
+          <circle cx="12" cy="18" r="2.2" fill="currentColor" />
+          <path
+            d="M7.5 13.5a6 6 0 0 1 9 0 M5 11a9.5 9.5 0 0 1 14 0"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+          />
+        </g>
+        <g id="ic-monitor">
+          <rect
+            x="3"
+            y="4.5"
+            width="18"
+            height="12"
+            rx="1.6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+          />
+          <polyline
+            points="6,13 9,9.5 12,11.5 18,6.5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <line
+            x1="9"
+            y1="20"
+            x2="15"
+            y2="20"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+          />
+          <line
+            x1="12"
+            y1="16.5"
+            x2="12"
+            y2="20"
+            stroke="currentColor"
+            stroke-width="1.7"
+          />
+        </g>
+        <g id="ic-insight">
+          <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <line x1="6" y1="20" x2="6" y2="11" />
+            <line x1="12" y1="20" x2="12" y2="6" />
+            <line x1="18" y1="20" x2="18" y2="14" />
+          </g>
+        </g>
+        <g id="ic-doc">
+          <path
+            d="M6 3.5h8l4 4V20.5H6Z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M14 3.5V7.5H18"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linejoin="round"
+          />
+          <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <line x1="9" y1="12" x2="15" y2="12" />
+            <line x1="9" y1="15.5" x2="15" y2="15.5" />
+          </g>
+        </g>
+        <g id="ic-piggy">
+          <path
+            d="M4 12.5a6 6 0 0 1 6-5.5h3a6 6 0 0 1 6 5.2c.8.3 1 1 1 1.8 0 .7-.5 1.2-1.1 1.4A6 6 0 0 1 16 19v1.5h-2.5V19h-3v1.5H8V19a6 6 0 0 1-4-6.5Z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linejoin="round"
+          />
+          <circle cx="9" cy="12" r="1.1" fill="currentColor" />
+          <path
+            d="M11 6.5C11 5 12.5 5 13 6"
+            stroke="currentColor"
+            stroke-width="1.5"
+            fill="none"
+            stroke-linecap="round"
+          />
+        </g>
+        <g id="ic-bell">
+          <path
+            d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2H4.5Z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M10 18a2 2 0 0 0 4 0"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+          />
+        </g>
+        <g id="ic-vsolar">
+          <circle
+            cx="12"
+            cy="12"
+            r="3.6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+          />
+          <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+            <line x1="12" y1="3.5" x2="12" y2="5.6" />
+            <line x1="12" y1="18.4" x2="12" y2="20.5" />
+            <line x1="3.5" y1="12" x2="5.6" y2="12" />
+            <line x1="18.4" y1="12" x2="20.5" y2="12" />
+            <line x1="6" y1="6" x2="7.5" y2="7.5" />
+            <line x1="16.5" y1="16.5" x2="18" y2="18" />
+            <line x1="18" y1="6" x2="16.5" y2="7.5" />
+            <line x1="7.5" y1="16.5" x2="6" y2="18" />
+          </g>
+        </g>
+        <g id="ic-trenddown">
+          <polyline
+            points="4,7 10,13 13,10 20,17"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M20 12 V17 H15"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g id="ic-leaf">
+          <path
+            d="M5 19c0-8 6-13 14-13 0 8-5 14-13 14 0 0-1-4 1-7"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g id="ic-shield">
+          <path
+            d="M12 3 19 6V11c0 5-3 8-7 10-4-2-7-5-7-10V6Z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linejoin="round"
+          />
+          <polyline
+            points="9,12 11,14 15,9.5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g id="ic-doccheck">
+          <path
+            d="M6 3.5h8l4 4V20.5H6Z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M14 3.5V7.5H18"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+          />
+          <polyline
+            points="8.5,14 10.5,16 15,11"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g id="ic-cube2">
+          <path
+            d="M12 3 21 7.5V16.5L12 21 3 16.5V7.5Z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M3 7.5 12 12 21 7.5 M12 12 V21"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.4"
+          />
+        </g>
+        <g id="ic-portal">
+          <path
+            d="M5 9.5 12 5 19 9.5 12 14Z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M5 13.5 12 18 19 13.5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g id="ic-spark">
+          <path
+            d="M12 3l1.8 5.4L19 10l-5.2 1.6L12 17l-1.8-5.4L5 10l5.2-1.6Z"
+            fill="currentColor"
+          />
+        </g>
+        <g id="ic-play">
+          <path d="M8 5.5 18 12 8 18.5Z" fill="currentColor" />
+        </g>
+        <g id="ic-pause">
+          <rect
+            x="7"
+            y="5.5"
+            width="3.4"
+            height="13"
+            rx="1"
+            fill="currentColor"
+          />
+          <rect
+            x="13.6"
+            y="5.5"
+            width="3.4"
+            height="13"
+            rx="1"
+            fill="currentColor"
+          />
+        </g>
+        <g id="ic-arrow">
+          <line
+            x1="4"
+            y1="12"
+            x2="18"
+            y2="12"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+          />
+          <polyline
+            points="13,7 19,12 13,17"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g id="ic-down">
+          <polyline
+            points="5,9 12,16 19,9"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g id="ic-money">
+          <circle
+            cx="12"
+            cy="12"
+            r="8.5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+          />
+          <path
+            d="M10 8.5h2.6a2 2 0 0 1 0 4H10m0 0h3.2 M10 8.5V16 M9 11h4.6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+        </g>
+        <g id="ic-cloud">
+          <path
+            d="M7 18a4 4 0 0 1-.5-8 5.5 5.5 0 0 1 10.6 1.2A3.4 3.4 0 0 1 17 18Z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g id="ic-clock">
+          <circle
+            cx="12"
+            cy="12"
+            r="8.5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+          />
+          <path
+            d="M12 7.5V12l3.2 2"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g id="ic-cpu">
+          <rect
+            x="6"
+            y="6"
+            width="12"
+            height="12"
+            rx="2"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+          />
+          <rect
+            x="9.5"
+            y="9.5"
+            width="5"
+            height="5"
+            rx="1"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          />
+          <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <line x1="9" y1="3.5" x2="9" y2="6" />
+            <line x1="15" y1="3.5" x2="15" y2="6" />
+            <line x1="9" y1="18" x2="9" y2="20.5" />
+            <line x1="15" y1="18" x2="15" y2="20.5" />
+            <line x1="3.5" y1="9" x2="6" y2="9" />
+            <line x1="3.5" y1="15" x2="6" y2="15" />
+            <line x1="18" y1="9" x2="20.5" y2="9" />
+            <line x1="18" y1="15" x2="20.5" y2="15" />
+          </g>
+        </g>
+        <g id="ic-database">
+          <ellipse
+            cx="12"
+            cy="6"
+            rx="7"
+            ry="2.6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+          />
+          <path
+            d="M5 6v12c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6V6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+          />
+          <path
+            d="M5 12c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          />
+        </g>
+        <g id="ic-target">
+          <circle
+            cx="12"
+            cy="12"
+            r="8.5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+          />
+          <circle
+            cx="12"
+            cy="12"
+            r="4.6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          />
+          <circle cx="12" cy="12" r="1.4" fill="currentColor" />
+        </g>
+        <g id="ic-layers">
+          <path
+            d="M12 3 21 8 12 13 3 8Z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M3 12 12 17 21 12 M3 16 12 21 21 16"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g id="ic-gauge">
+          <path
+            d="M4 16a8 8 0 0 1 16 0"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+          />
+          <line
+            x1="12"
+            y1="16"
+            x2="16"
+            y2="10.5"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+          />
+          <circle cx="12" cy="16" r="1.6" fill="currentColor" />
+        </g>
+        <g id="ic-weather">
+          <circle
+            cx="9"
+            cy="9"
+            r="3.2"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+          />
+          <g stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+            <line x1="9" y1="2.6" x2="9" y2="4" />
+            <line x1="3.4" y1="9" x2="4.8" y2="9" />
+            <line x1="4.9" y1="4.9" x2="5.9" y2="5.9" />
+          </g>
+          <path
+            d="M11 19a3 3 0 0 1-.4-6 4 4 0 0 1 7.7.9A2.6 2.6 0 0 1 18 19Z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g id="ic-link">
+          <path
+            d="M9.5 14.5 14.5 9.5 M8.5 12 6 14.5a3.2 3.2 0 0 0 4.5 4.5L13 16.5 M15.5 12 18 9.5a3.2 3.2 0 0 0-4.5-4.5L11 7.5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g id="ic-check">
+          <polyline
+            points="5,12.5 10,17.5 19,7"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g id="ic-pulse">
+          <path
+            d="M3 12h4l2-6 4 12 2-6h6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g id="ic-contact">
+          <circle
+            cx="12"
+            cy="8"
+            r="3.6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          />
+          <path
+            d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+        </g>
+      </defs>
+    </svg>
 
-<!-- ===================== ICON SPRITE ===================== -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
-  <g id="ic-sun"><circle cx="12" cy="12" r="4.4" fill="none" stroke="currentColor" stroke-width="1.8"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="12" y1="2.5" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21.5"/><line x1="2.5" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21.5" y2="12"/><line x1="5.2" y1="5.2" x2="7" y2="7"/><line x1="17" y1="17" x2="18.8" y2="18.8"/><line x1="18.8" y1="5.2" x2="17" y2="7"/><line x1="7" y1="17" x2="5.2" y2="18.8"/></g></g>
-  <g id="ic-moon"><path d="M20 14.5A8 8 0 1 1 10.5 4 6.3 6.3 0 0 0 20 14.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></g>
-  <g id="ic-solar"><rect x="3.5" y="11" width="17" height="9" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/><g stroke="currentColor" stroke-width="1.4"><line x1="9" y1="11" x2="7.6" y2="20"/><line x1="14.6" y1="11" x2="13.2" y2="20"/><line x1="4" y1="15.5" x2="20" y2="15.5"/></g><g stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><line x1="12" y1="3" x2="12" y2="6"/><line x1="7.5" y1="4.6" x2="8.7" y2="6.8"/><line x1="16.5" y1="4.6" x2="15.3" y2="6.8"/></g></g>
-  <g id="ic-grid"><path d="M12 3 L7 21 M12 3 L17 21 M9.5 9 L14.5 9 M8.4 13 L15.6 13 M7.5 17 L16.5 17 M5 21 L19 21" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></g>
-  <g id="ic-price"><polyline points="3,17 8,11 12,14 20,5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="5" r="1.6" fill="currentColor"/><path d="M3 20 H20" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></g>
-  <g id="ic-power"><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="5" y1="20" x2="5" y2="13"/><line x1="10" y1="20" x2="10" y2="9"/><line x1="15" y1="20" x2="15" y2="11"/><line x1="20" y1="20" x2="20" y2="5"/></g></g>
-  <g id="ic-battery"><rect x="3" y="7" width="16" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="20" y="10.5" width="2.4" height="4" rx="1" fill="currentColor"/><path d="M11.5 9.5 L8.8 13.3 H11.2 L10 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></g>
-  <g id="ic-chiller"><rect x="3.4" y="5" width="17.2" height="14" rx="2.4" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="11.4" r="4.6" fill="none" stroke="currentColor" stroke-width="1.5"/><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M12 11.4c1.6-.9 2.6-2.4 2.2-4"/><path d="M12 11.4c-1.9.1-3.5-.6-4.1-2.1"/><path d="M12 11.4c.3 1.9-.1 3.5-1.7 4.3"/></g><circle cx="12" cy="11.4" r="1" fill="currentColor"/><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="6.6" y1="19" x2="6.6" y2="20.6"/><line x1="17.4" y1="19" x2="17.4" y2="20.6"/></g></g>
-  <g id="ic-snow"><g stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><line x1="12" y1="3" x2="12" y2="21"/><line x1="3.2" y1="7.5" x2="20.8" y2="16.5"/><line x1="20.8" y1="7.5" x2="3.2" y2="16.5"/><path d="M12 3 9.6 5.4 M12 3 14.4 5.4 M12 21 9.6 18.6 M12 21 14.4 18.6"/><path d="M3.2 7.5 3.6 10.4 M3.2 7.5 6.1 7.1 M20.8 16.5 20.4 13.6 M20.8 16.5 17.9 16.9 M20.8 7.5 17.9 7.1 M20.8 7.5 20.4 10.4 M3.2 16.5 6.1 16.9 M3.2 16.5 3.6 13.6"/></g></g>
-  <g id="ic-thermo"><path d="M14 13.2V5a2.5 2.5 0 0 0-5 0v8.2a4.2 4.2 0 1 0 5 0Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="11.5" cy="16.6" r="1.6" fill="currentColor"/></g>
-  <g id="ic-cube"><path d="M12 3 21 7.5V16.5L12 21 3 16.5V7.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M3 7.5 12 12 21 7.5 M12 12 V21" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></g>
-  <g id="ic-automation"><rect x="6" y="6" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="9.5" y="9.5" width="5" height="5" rx="1" fill="currentColor"/><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="9" y1="3.5" x2="9" y2="6"/><line x1="15" y1="3.5" x2="15" y2="6"/><line x1="9" y1="18" x2="9" y2="20.5"/><line x1="15" y1="18" x2="15" y2="20.5"/><line x1="3.5" y1="9" x2="6" y2="9"/><line x1="3.5" y1="15" x2="6" y2="15"/><line x1="18" y1="9" x2="20.5" y2="9"/><line x1="18" y1="15" x2="20.5" y2="15"/></g></g>
-  <g id="ic-building"><rect x="5" y="3.5" width="14" height="17" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/><g fill="currentColor"><rect x="8" y="7" width="2.5" height="2.5"/><rect x="13.5" y="7" width="2.5" height="2.5"/><rect x="8" y="11.5" width="2.5" height="2.5"/><rect x="13.5" y="11.5" width="2.5" height="2.5"/></g><rect x="10.2" y="16" width="3.6" height="4.5" fill="currentColor"/></g>
-  <g id="ic-brain"><path d="M9 4.5A3 3 0 0 0 6 7.5 3 3 0 0 0 4.5 13 3 3 0 0 0 7 18a3 3 0 0 0 5 1 3 3 0 0 0 5-1 3 3 0 0 0 2.5-5A3 3 0 0 0 18 7.5 3 3 0 0 0 15 4.5a3 3 0 0 0-6 0Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M12 4.5V19 M9 9 H6.4 M15 9 H17.6 M9.2 14 H7 M14.8 14 H17" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></g>
-  <g id="ic-collect"><circle cx="12" cy="12" r="2.4" fill="currentColor"/><g stroke="currentColor" stroke-width="1.5"><line x1="12" y1="9.6" x2="12" y2="4"/><line x1="12" y1="14.4" x2="12" y2="20"/><line x1="9.9" y1="10.8" x2="5" y2="8"/><line x1="14.1" y1="13.2" x2="19" y2="16"/><line x1="9.9" y1="13.2" x2="5" y2="16"/><line x1="14.1" y1="10.8" x2="19" y2="8"/></g><g fill="currentColor"><circle cx="12" cy="4" r="1.7"/><circle cx="12" cy="20" r="1.7"/><circle cx="5" cy="8" r="1.7"/><circle cx="19" cy="8" r="1.7"/><circle cx="5" cy="16" r="1.7"/><circle cx="19" cy="16" r="1.7"/></g></g>
-  <g id="ic-analyse"><path d="M4 19 H20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><polyline points="5,15 9,10 12.5,12.5 19,5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 5 H19 V8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></g>
-  <g id="ic-optimize"><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/><g stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><line x1="12" y1="3" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="21"/><line x1="3" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="21" y2="12"/><line x1="5.6" y1="5.6" x2="7.7" y2="7.7"/><line x1="16.3" y1="16.3" x2="18.4" y2="18.4"/><line x1="18.4" y1="5.6" x2="16.3" y2="7.7"/><line x1="7.7" y1="16.3" x2="5.6" y2="18.4"/></g></g>
-  <g id="ic-signal"><circle cx="12" cy="18" r="2.2" fill="currentColor"/><path d="M7.5 13.5a6 6 0 0 1 9 0 M5 11a9.5 9.5 0 0 1 14 0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></g>
-  <g id="ic-monitor"><rect x="3" y="4.5" width="18" height="12" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.7"/><polyline points="6,13 9,9.5 12,11.5 18,6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><line x1="9" y1="20" x2="15" y2="20" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><line x1="12" y1="16.5" x2="12" y2="20" stroke="currentColor" stroke-width="1.7"/></g>
-  <g id="ic-insight"><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="20" x2="6" y2="11"/><line x1="12" y1="20" x2="12" y2="6"/><line x1="18" y1="20" x2="18" y2="14"/></g></g>
-  <g id="ic-doc"><path d="M6 3.5h8l4 4V20.5H6Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M14 3.5V7.5H18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="15.5" x2="15" y2="15.5"/></g></g>
-  <g id="ic-piggy"><path d="M4 12.5a6 6 0 0 1 6-5.5h3a6 6 0 0 1 6 5.2c.8.3 1 1 1 1.8 0 .7-.5 1.2-1.1 1.4A6 6 0 0 1 16 19v1.5h-2.5V19h-3v1.5H8V19a6 6 0 0 1-4-6.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="9" cy="12" r="1.1" fill="currentColor"/><path d="M11 6.5C11 5 12.5 5 13 6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></g>
-  <g id="ic-bell"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2H4.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M10 18a2 2 0 0 0 4 0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></g>
-  <g id="ic-vsolar"><circle cx="12" cy="12" r="3.6" fill="none" stroke="currentColor" stroke-width="1.7"/><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="12" y1="3.5" x2="12" y2="5.6"/><line x1="12" y1="18.4" x2="12" y2="20.5"/><line x1="3.5" y1="12" x2="5.6" y2="12"/><line x1="18.4" y1="12" x2="20.5" y2="12"/><line x1="6" y1="6" x2="7.5" y2="7.5"/><line x1="16.5" y1="16.5" x2="18" y2="18"/><line x1="18" y1="6" x2="16.5" y2="7.5"/><line x1="7.5" y1="16.5" x2="6" y2="18"/></g></g>
-  <g id="ic-trenddown"><polyline points="4,7 10,13 13,10 20,17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 12 V17 H15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></g>
-  <g id="ic-leaf"><path d="M5 19c0-8 6-13 14-13 0 8-5 14-13 14 0 0-1-4 1-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></g>
-  <g id="ic-shield"><path d="M12 3 19 6V11c0 5-3 8-7 10-4-2-7-5-7-10V6Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><polyline points="9,12 11,14 15,9.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></g>
-  <g id="ic-doccheck"><path d="M6 3.5h8l4 4V20.5H6Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M14 3.5V7.5H18" fill="none" stroke="currentColor" stroke-width="1.6"/><polyline points="8.5,14 10.5,16 15,11" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></g>
-  <g id="ic-cube2"><path d="M12 3 21 7.5V16.5L12 21 3 16.5V7.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M3 7.5 12 12 21 7.5 M12 12 V21" fill="none" stroke="currentColor" stroke-width="1.4"/></g>
-  <g id="ic-portal"><path d="M5 9.5 12 5 19 9.5 12 14Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M5 13.5 12 18 19 13.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></g>
-  <g id="ic-spark"><path d="M12 3l1.8 5.4L19 10l-5.2 1.6L12 17l-1.8-5.4L5 10l5.2-1.6Z" fill="currentColor"/></g>
-  <g id="ic-play"><path d="M8 5.5 18 12 8 18.5Z" fill="currentColor"/></g>
-  <g id="ic-pause"><rect x="7" y="5.5" width="3.4" height="13" rx="1" fill="currentColor"/><rect x="13.6" y="5.5" width="3.4" height="13" rx="1" fill="currentColor"/></g>
-  <g id="ic-arrow"><line x1="4" y1="12" x2="18" y2="12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><polyline points="13,7 19,12 13,17" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></g>
-  <g id="ic-down"><polyline points="5,9 12,16 19,9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></g>
-  <g id="ic-money"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M10 8.5h2.6a2 2 0 0 1 0 4H10m0 0h3.2 M10 8.5V16 M9 11h4.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></g>
-  <g id="ic-cloud"><path d="M7 18a4 4 0 0 1-.5-8 5.5 5.5 0 0 1 10.6 1.2A3.4 3.4 0 0 1 17 18Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></g>
-  <g id="ic-clock"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 7.5V12l3.2 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></g>
-  <g id="ic-cpu"><rect x="6" y="6" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="9.5" y="9.5" width="5" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="9" y1="3.5" x2="9" y2="6"/><line x1="15" y1="3.5" x2="15" y2="6"/><line x1="9" y1="18" x2="9" y2="20.5"/><line x1="15" y1="18" x2="15" y2="20.5"/><line x1="3.5" y1="9" x2="6" y2="9"/><line x1="3.5" y1="15" x2="6" y2="15"/><line x1="18" y1="9" x2="20.5" y2="9"/><line x1="18" y1="15" x2="20.5" y2="15"/></g></g>
-  <g id="ic-database"><ellipse cx="12" cy="6" rx="7" ry="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M5 6v12c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6V6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M5 12c0 1.4 3.1 2.6 7 2.6s7-1.2 7-2.6" fill="none" stroke="currentColor" stroke-width="1.5"/></g>
-  <g id="ic-target"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4.6" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/></g>
-  <g id="ic-layers"><path d="M12 3 21 8 12 13 3 8Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M3 12 12 17 21 12 M3 16 12 21 21 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></g>
-  <g id="ic-gauge"><path d="M4 16a8 8 0 0 1 16 0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><line x1="12" y1="16" x2="16" y2="10.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="12" cy="16" r="1.6" fill="currentColor"/></g>
-  <g id="ic-weather"><circle cx="9" cy="9" r="3.2" fill="none" stroke="currentColor" stroke-width="1.6"/><g stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><line x1="9" y1="2.6" x2="9" y2="4"/><line x1="3.4" y1="9" x2="4.8" y2="9"/><line x1="4.9" y1="4.9" x2="5.9" y2="5.9"/></g><path d="M11 19a3 3 0 0 1-.4-6 4 4 0 0 1 7.7.9A2.6 2.6 0 0 1 18 19Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></g>
-  <g id="ic-link"><path d="M9.5 14.5 14.5 9.5 M8.5 12 6 14.5a3.2 3.2 0 0 0 4.5 4.5L13 16.5 M15.5 12 18 9.5a3.2 3.2 0 0 0-4.5-4.5L11 7.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></g>
-  <g id="ic-check"><polyline points="5,12.5 10,17.5 19,7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
-  <g id="ic-pulse"><path d="M3 12h4l2-6 4 12 2-6h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></g>
-  <g id="ic-contact"><circle cx="12" cy="8" r="3.6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></g>
-</defs></svg>
+    <div class="scroll-progress" id="progress"></div>
 
-<div class="scroll-progress" id="progress"></div>
-
-<!-- ===================== NAV ===================== -->
-<nav class="nav" id="nav">
-  <a class="brand" href="#" id="navHome" aria-label="Til toppen">
-    <span class="logo"><img src="assets/svalinn-logo.png" alt="Svalinn"></span>
-    <span class="tag">Teknisk dypdykk</span>
-  </a>
-  <div class="navlinks" id="navlinks">
-    <a href="#problem">Problemet</a>
-    <a href="#arkitektur">Arkitektur</a>
-    <a href="#batteri">Termisk batteri</a>
-    <a href="#motor">Beslutningsmotoren</a>
-    <a href="#dognet">Døgnet</a>
-    <a href="#verdi">Verdi</a>
-  </div>
-  <a href="#kontakt" class="btn primary navcta" style="padding:10px 18px;font-size:13px">Book teknisk gjennomgang</a>
-  <button class="nav-burger" id="navBurger" aria-label="Meny" aria-expanded="false" aria-controls="navMenu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<!-- mobile dropdown menu -->
-<div class="nav-menu" id="navMenu" aria-hidden="true">
-  <a href="#problem"><span class="nm-i"><svg viewBox="0 0 24 24"><use href="#ic-price"/></svg></span>Problemet</a>
-  <a href="#arkitektur"><span class="nm-i"><svg viewBox="0 0 24 24"><use href="#ic-layers"/></svg></span>Arkitektur</a>
-  <a href="#batteri"><span class="nm-i"><svg viewBox="0 0 24 24"><use href="#ic-cube"/></svg></span>Termisk batteri</a>
-  <a href="#motor"><span class="nm-i"><svg viewBox="0 0 24 24"><use href="#ic-cpu"/></svg></span>Beslutningsmotoren</a>
-  <a href="#dognet"><span class="nm-i"><svg viewBox="0 0 24 24"><use href="#ic-clock"/></svg></span>Døgnet</a>
-  <a href="#verdi"><span class="nm-i"><svg viewBox="0 0 24 24"><use href="#ic-spark"/></svg></span>Verdi</a>
-  <a href="#portal"><span class="nm-i"><svg viewBox="0 0 24 24"><use href="#ic-portal"/></svg></span>Kundeportal</a>
-  <a href="#kontakt" class="nm-cta"><svg viewBox="0 0 24 24"><use href="#ic-contact"/></svg>Book teknisk gjennomgang</a>
-</div>
-<div class="nav-scrim" id="navScrim"></div>
-
-<!-- ===================== SCROLL TIMELINE (left) ===================== -->
-<nav class="timeline" id="timeline" aria-label="Reise gjennom siden">
-  <span class="tl-track"><span class="tl-fill" id="tlFill"></span></span>
-  <a href="#problem"    class="tl-item" data-sec="problem"><svg viewBox="0 0 24 24"><use href="#ic-price"/></svg><span class="tl-tip">01 · Problemet</span></a>
-  <a href="#arkitektur" class="tl-item" data-sec="arkitektur"><svg viewBox="0 0 24 24"><use href="#ic-layers"/></svg><span class="tl-tip">02 · Arkitektur</span></a>
-  <a href="#batteri"    class="tl-item" data-sec="batteri"><svg viewBox="0 0 24 24"><use href="#ic-cube"/></svg><span class="tl-tip">03 · Termisk batteri</span></a>
-  <a href="#motor"      class="tl-item" data-sec="motor"><svg viewBox="0 0 24 24"><use href="#ic-cpu"/></svg><span class="tl-tip">04 · Beslutningsmotoren</span></a>
-  <a href="#dognet"     class="tl-item" data-sec="dognet"><svg viewBox="0 0 24 24"><use href="#ic-clock"/></svg><span class="tl-tip">05 · Et døgn i drift</span></a>
-  <a href="#verdi"      class="tl-item" data-sec="verdi"><svg viewBox="0 0 24 24"><use href="#ic-spark"/></svg><span class="tl-tip">06 · Verdi</span></a>
-  <a href="#portal"     class="tl-item" data-sec="portal"><svg viewBox="0 0 24 24"><use href="#ic-portal"/></svg><span class="tl-tip">07 · Kundeportal</span></a>
-  <a href="#kontakt"    class="tl-item" data-sec="kontakt"><svg viewBox="0 0 24 24"><use href="#ic-contact"/></svg><span class="tl-tip">08 · Book teknisk gjennomgang</span></a>
-</nav>
-
-<!-- ===================== HERO ===================== -->
-<header class="hero">
-  <div class="wrap">
-    <div class="hero-inner">
-      <div class="kicker eyebrow rv in">
-        <span class="dash"></span>Svalinn Technology · styringslag for kuldeanlegg
+    <!-- ===================== NAV ===================== -->
+    <nav class="nav" id="nav">
+      <a class="brand" href="#" id="navHome" aria-label="Til toppen">
+        <span class="logo"
+          ><img src="assets/svalinn-logo.png" alt="Svalinn"
+        /></span>
+        <span class="tag">Teknisk dypdykk</span>
+      </a>
+      <div class="navlinks" id="navlinks">
+        <a href="#problem">Problemet</a>
+        <a href="#arkitektur">Arkitektur</a>
+        <a href="#batteri">Termisk batteri</a>
+        <a href="#motor">Beslutningsmotoren</a>
+        <a href="#dognet">Døgnet</a>
+        <a href="#verdi">Verdi</a>
       </div>
-      <h1 class="hero-title rv in d1"><span>Et optimaliserende</span><span>styringslag som gjør</span><span>kuldebygget til et</span><span><em>termisk batteri</em>.</span></h1>
-      <p class="lead rv in d2"><span class="hl">Svalinn Technology</span> legger seg oppå eksisterende automasjon, predikerer kuldebehov, sol og pris time for time, og bestemmer <span class="hl">når kulde skal produseres og når den skal hentes fra lager</span> — uten å bytte ut en eneste komponent i anlegget.</p>
-      <div class="hero-cta rv in d3">
-        <a href="#motor" class="btn primary"><svg viewBox="0 0 24 24"><use href="#ic-cpu"/></svg>Slik fungerer motoren</a>
-        <a href="#dognet" class="btn"><svg viewBox="0 0 24 24"><use href="#ic-clock"/></svg>Se et døgn i drift</a>
-      </div>
-      <div class="hero-stats rv in d4">
-        <div class="st"><b>80–100<span class="u">%</span></b><span>egenbruk av solstrøm (fra 35–40 %)</span></div>
-        <div class="st"><b>0<span class="u">kr</span></b><span>investering i nytt kuldeanlegg</span></div>
-        <div class="st"><b>24/7</b><span>kontinuerlig optimalisering</span></div>
-      </div>
+      <a
+        href="#kontakt"
+        class="btn primary navcta"
+        style="padding: 10px 18px; font-size: 13px"
+        >Book teknisk gjennomgang</a
+      >
+      <button
+        class="nav-burger"
+        id="navBurger"
+        aria-label="Meny"
+        aria-expanded="false"
+        aria-controls="navMenu"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- mobile dropdown menu -->
+    <div class="nav-menu" id="navMenu" aria-hidden="true">
+      <a href="#problem"
+        ><span class="nm-i"
+          ><svg viewBox="0 0 24 24"><use href="#ic-price" /></svg></span
+        >Problemet</a
+      >
+      <a href="#arkitektur"
+        ><span class="nm-i"
+          ><svg viewBox="0 0 24 24"><use href="#ic-layers" /></svg></span
+        >Arkitektur</a
+      >
+      <a href="#batteri"
+        ><span class="nm-i"
+          ><svg viewBox="0 0 24 24"><use href="#ic-cube" /></svg></span
+        >Termisk batteri</a
+      >
+      <a href="#motor"
+        ><span class="nm-i"
+          ><svg viewBox="0 0 24 24"><use href="#ic-cpu" /></svg></span
+        >Beslutningsmotoren</a
+      >
+      <a href="#dognet"
+        ><span class="nm-i"
+          ><svg viewBox="0 0 24 24"><use href="#ic-clock" /></svg></span
+        >Døgnet</a
+      >
+      <a href="#verdi"
+        ><span class="nm-i"
+          ><svg viewBox="0 0 24 24"><use href="#ic-spark" /></svg></span
+        >Verdi</a
+      >
+      <a href="#portal"
+        ><span class="nm-i"
+          ><svg viewBox="0 0 24 24"><use href="#ic-portal" /></svg></span
+        >Kundeportal</a
+      >
+      <a href="#kontakt" class="nm-cta"
+        ><svg viewBox="0 0 24 24"><use href="#ic-contact" /></svg>Book teknisk
+        gjennomgang</a
+      >
     </div>
-  </div>
-</header>
+    <div class="nav-scrim" id="navScrim"></div>
 
-<!-- ===================== PROBLEM ===================== -->
-<section class="sec alt" id="problem">
-  <div class="wrap">
-    <div class="sec-head rv sl">
-      <div class="kicker"><span class="ko">01</span><span class="dash"></span>Problemet</div>
-      <h2 class="h-xl">Et kuldeanlegg betaler tre regninger samtidig —&nbsp;og de toppes til feil tid.</h2>
-      <p class="lead">Et kjøle- og frysebygg må holde temperatur døgnet rundt.<br>Uten styring kjøpes energi «når man tilfeldigvis trenger den»<br>ofte i de dyreste timene, med dårlig utnyttelse av egen sol.<br>Svalinn Technology angriper alle tre kostnadsdriverne.</p>
-    </div>
+    <!-- ===================== SCROLL TIMELINE (left) ===================== -->
+    <nav class="timeline" id="timeline" aria-label="Reise gjennom siden">
+      <span class="tl-track"><span class="tl-fill" id="tlFill"></span></span>
+      <a href="#problem" class="tl-item" data-sec="problem"
+        ><svg viewBox="0 0 24 24"><use href="#ic-price" /></svg>
+        <span class="tl-tip">01 · Problemet</span></a
+      >
+      <a href="#arkitektur" class="tl-item" data-sec="arkitektur"
+        ><svg viewBox="0 0 24 24"><use href="#ic-layers" /></svg>
+        <span class="tl-tip">02 · Arkitektur</span></a
+      >
+      <a href="#batteri" class="tl-item" data-sec="batteri"
+        ><svg viewBox="0 0 24 24"><use href="#ic-cube" /></svg>
+        <span class="tl-tip">03 · Termisk batteri</span></a
+      >
+      <a href="#motor" class="tl-item" data-sec="motor"
+        ><svg viewBox="0 0 24 24"><use href="#ic-cpu" /></svg>
+        <span class="tl-tip">04 · Beslutningsmotoren</span></a
+      >
+      <a href="#dognet" class="tl-item" data-sec="dognet"
+        ><svg viewBox="0 0 24 24"><use href="#ic-clock" /></svg>
+        <span class="tl-tip">05 · Et døgn i drift</span></a
+      >
+      <a href="#verdi" class="tl-item" data-sec="verdi"
+        ><svg viewBox="0 0 24 24"><use href="#ic-spark" /></svg>
+        <span class="tl-tip">06 · Verdi</span></a
+      >
+      <a href="#portal" class="tl-item" data-sec="portal"
+        ><svg viewBox="0 0 24 24"><use href="#ic-portal" /></svg>
+        <span class="tl-tip">07 · Kundeportal</span></a
+      >
+      <a href="#kontakt" class="tl-item" data-sec="kontakt"
+        ><svg viewBox="0 0 24 24"><use href="#ic-contact" /></svg>
+        <span class="tl-tip">08 · Book teknisk gjennomgang</span></a
+      >
+    </nav>
 
-    <div class="grid-3">
-      <div class="card rv sr">
-        <span class="num">A · ENERGI (kWh)</span>
-        <div class="cic"><svg viewBox="0 0 24 24"><use href="#ic-price"/></svg></div>
-        <h3>Spotpris varierer 5–10×</h3>
-        <p>Prisen svinger time for time. Et anlegg uten styring kjøper like mye kulde-energi kl. 08 (dyrt) som kl. 13 (billig/solrikt). Hver forflyttet kWh fra dyr til billig time er ren besparelse.</p>
-      </div>
-      <div class="card rv sr">
-        <span class="num">B · EFFEKT (kW)</span>
-        <div class="cic"><svg viewBox="0 0 24 24"><use href="#ic-power"/></svg></div>
-        <h3>Effekttariffen straffer topper</h3>
-        <p>Nettleien betales i stor grad for høyeste effektuttak i måneden. Når kuldemaskinen starter samtidig med resten av driften, skapes en topp som koster hele måneden. Lastutjevning kutter denne toppen.</p>
-      </div>
-      <div class="card rv sr">
-        <span class="num">C · SOL (egenbruk)</span>
-        <div class="cic"><svg viewBox="0 0 24 24"><use href="#ic-vsolar"/></svg></div>
-        <h3>Solstrøm går tapt</h3>
-        <p>Midt på dagen produserer solcellene mer enn anlegget bruker. Uten et sted å «lagre» overskuddet selges det billig ut på nettet — typisk utnyttes bare <span class="hl">35–40 %</span> av egen produksjon.</p>
-      </div>
-    </div>
-
-    <div class="callout rv sl d2" style="margin-top:30px">
-      <span class="ci"><svg viewBox="0 0 24 24"><use href="#ic-spark"/></svg></span>
-      <p><b>Innsikten:</b> kulde er lagringsbar energi. Et fryselager har enorm termisk masse — det kan «overkjøles» når strømmen er billig og solrik, og deretter <span class="mint">tære på den lagrede kulden</span> når strømmen er dyr. Bygget blir et batteri du allerede eier. Svalinn Technology er styringen som faktisk utnytter det.</p>
-  </div>
-  </div>
-</section>
-
-<!-- ===================== ARKITEKTUR ===================== -->
-<section class="sec" id="arkitektur">
-  <div class="wrap">
-    <div class="sec-head rv sr">
-      <div class="kicker"><span class="ko">02</span><span class="dash"></span>Systemarkitektur</div>
-      <h2 class="h-xl">Et lag over anlegget — ikke en erstatning for det.</h2>
-      <p class="lead">Svalinn Technology integreres mot eksisterende styringssystemer og leser/skriver via etablerte grensesnitt. Anlegget fortsetter å gå som før; Svalinn Technology flytter <em>når</em> ting skjer for å treffe pris, effekt og sol optimalt.</p>
-    </div>
-
-    <div class="arch rv sl d1">
-      <div class="arch-grid">
-
-        <!-- Layer 1: data inn -->
-        <div class="arch-layer">
-          <div class="arch-lhead">
-            <span class="ln b"><svg viewBox="0 0 24 24"><use href="#ic-database"/></svg></span>
-            <h4>Datakilder inn</h4>
-            <span class="meta">datainnsamling · API &amp; sensorer</span>
+    <!-- ===================== HERO ===================== -->
+    <header class="hero">
+      <div class="wrap">
+        <div class="hero-inner">
+          <div class="kicker eyebrow rv in">
+            <span class="dash"></span>Svalinn Technology · styringslag for
+            kuldeanlegg
           </div>
-          <div class="node-row">
-            <div class="anode"><span class="ai"><svg viewBox="0 0 24 24"><use href="#ic-price"/></svg></span><span class="an">Spotpris</span><span class="as">Nord Pool, time/15 min</span></div>
-            <div class="anode"><span class="ai"><svg viewBox="0 0 24 24"><use href="#ic-weather"/></svg></span><span class="an">Værvarsel</span><span class="as">temp, sol, vind</span></div>
-            <div class="anode"><span class="ai"><svg viewBox="0 0 24 24"><use href="#ic-thermo"/></svg></span><span class="an">Driftsdata</span><span class="as">romtemp, fordamper</span></div>
-            <div class="anode"><span class="ai"><svg viewBox="0 0 24 24"><use href="#ic-vsolar"/></svg></span><span class="an">Solproduksjon</span><span class="as">vekselretter, live</span></div>
-            <div class="anode"><span class="ai"><svg viewBox="0 0 24 24"><use href="#ic-gauge"/></svg></span><span class="an">Effektmåling</span><span class="as">AMS / kW-måler</span></div>
+          <h1 class="hero-title rv in d1">
+            <span>Et optimaliserende</span><span>styringslag som gjør</span
+            ><span>kuldebygget til et</span
+            ><span><em>termisk batteri</em>.</span>
+          </h1>
+          <p class="lead rv in d2">
+            <span class="hl">Svalinn Technology</span> legger seg oppå
+            eksisterende automasjon, predikerer kuldebehov, sol og pris time for
+            time, og bestemmer
+            <span class="hl"
+              >når kulde skal produseres og når den skal hentes fra lager</span
+            >
+            — uten å bytte ut en eneste komponent i anlegget.
+          </p>
+          <div class="hero-cta rv in d3">
+            <a href="#motor" class="btn primary"
+              ><svg viewBox="0 0 24 24"><use href="#ic-cpu" /></svg>Slik
+              fungerer motoren</a
+            >
+            <a href="#dognet" class="btn"
+              ><svg viewBox="0 0 24 24"><use href="#ic-clock" /></svg>Se et døgn
+              i drift</a
+            >
           </div>
-        </div>
-
-        <div class="flow-arrow"><svg viewBox="0 0 24 24"><use href="#ic-down"/></svg></div>
-
-        <!-- Core -->
-        <div class="arch-core">
-          <div class="core-head">
-            <span class="core-brain"><svg viewBox="0 0 24 24"><use href="#ic-brain"/></svg></span>
-            <div><b>Svalinn Technology</b><span>beslutningsmotor · skybasert optimalisering</span></div>
-          </div>
-          <div class="core-steps">
-            <div class="core-step"><span class="cs-n">01</span><h5>Datafangst</h5><p>Normaliserer og kvalitetssikrer alle strømmer</p></div>
-            <div class="core-step"><span class="cs-n">02</span><h5>Prediksjon</h5><p>Prognoser for behov, sol og pris</p></div>
-            <div class="core-step"><span class="cs-n">03</span><h5>Optimalisering</h5><p>Løser kostnadsminimering med driftsgrenser</p></div>
-            <div class="core-step"><span class="cs-n">04</span><h5>Styring</h5><p>Sender setpunkt til anlegget</p></div>
-          </div>
-        </div>
-
-        <div class="flow-arrow"><svg viewBox="0 0 24 24"><use href="#ic-down"/></svg></div>
-
-        <!-- Layer 3: control to existing automation -->
-        <div class="arch-layer">
-          <div class="arch-lhead">
-            <span class="ln c"><svg viewBox="0 0 24 24"><use href="#ic-signal"/></svg></span>
-            <h4>Styring ut → eksisterende automasjon</h4>
-            <span class="meta">setpunkt-skriving · vendor-agnostisk</span>
-          </div>
-          <div class="node-row">
-            <div class="anode"><span class="ai"><svg viewBox="0 0 24 24"><use href="#ic-automation"/></svg></span><span class="an">SD-anlegg</span><span class="as">Kiona, Danfoss, JCI, Siemens</span></div>
-            <div class="anode eng"><span class="ai"><svg viewBox="0 0 24 24"><use href="#ic-chiller"/></svg></span><span class="an">Kuldemaskin</span><span class="as">kapasitet / på-av</span></div>
-            <div class="anode eng"><span class="ai"><svg viewBox="0 0 24 24"><use href="#ic-cube"/></svg></span><span class="an">Termisk lager</span><span class="as">setpunkt-bånd</span></div>
-            <div class="anode eng"><span class="ai"><svg viewBox="0 0 24 24"><use href="#ic-battery"/></svg></span><span class="an">Evt. batteri</span><span class="as">el-lagring</span></div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="grid-2 rv sr d2" style="margin-top:30px">
-      <div class="card">
-        <h4><span style="color:var(--accent)">Ligger oppå — rører ikke sikkerhetslogikk</span></h4>
-        <p>Svalinn Technology skriver kun innenfor godkjente setpunkt-bånd. Lokale regulatorer beholder alle sikkerhets- og alarmfunksjoner. Faller forbindelsen bort, fortsetter anlegget på siste gyldige driftsmodus.</p>
-      </div>
-      <div class="card">
-        <h4><span style="color:var(--accent)">Samme logikk styrer hele energisystemet</span></h4>
-        <p>Der bygget også har varmepumpe, energibrønner og nærvarme, kan samme beslutningsmotor koordinere disse — overskuddsvarme fra kuldeproduksjon lades til brønnene, kulde til termisk lager. <span class="hl" style="display:block;margin-top:8px">Ett optimaliseringsproblem, flere fleksible ressurser.</span></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== TERMISK BATTERI ===================== -->
-<section class="sec alt" id="batteri">
-  <div class="wrap">
-    <div class="split wide-right">
-      <div class="rv">
-        <div class="kicker"><span class="ko">03</span><span class="dash"></span>Termisk batteri</div>
-        <h2 class="h-xl" style="margin:18px 0 20px">Fysikken: bygget lagrer kulde, ikke strøm.</h2>
-        <p class="lead" style="margin-bottom:24px">I stedet for dyre kjemiske batterier brukes byggets egen termiske masse — varer, luft og konstruksjon — som lager. Svalinn Technology produserer ekstra kulde når energien er billig/grønn, og lar temperaturen «drive» innenfor et tillatt bånd når den er dyr.</p>
-        <div class="spec">
-          <div class="row"><span class="k">Fryselager — setpunktbånd</span><span class="v"><span class="cold">−28 °C</span> ↔ <span class="cold">−18 °C</span></span></div>
-          <div class="row"><span class="k">Kjølelager — setpunktbånd</span><span class="v"><span class="warm">+2 °C</span> ↔ <span class="warm">+4 °C</span></span></div>
-          <div class="row"><span class="k">Lademodus</span><span class="v">overkjøling mot nedre grense</span></div>
-          <div class="row"><span class="k">Utlading</span><span class="v">drift mot øvre grense</span></div>
-          <div class="row"><span class="k">Tap / selvutlading</span><span class="v">lav — tung isolert masse</span></div>
-          <div class="row"><span class="k">Ekstra slitasje</span><span class="v">ingen — innenfor godkjent bånd</span></div>
-        </div>
-      </div>
-
-      <!-- thermal store viz -->
-      <div class="rv d1">
-        <div class="hero-card" style="padding:26px">
-          <div class="hc-top">
-            <div class="hc-title"><span class="ic"><svg viewBox="0 0 24 24"><use href="#ic-cube"/></svg></span>Lagringsnivå (SoC)</div>
-            <span class="chip tag-cold"><span class="d"></span>termisk</span>
-          </div>
-          <svg viewBox="0 0 360 250" style="width:100%;display:block">
-            <defs>
-              <linearGradient id="coldFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fe3ff"/><stop offset="1" stop-color="#2aa7d6"/></linearGradient>
-            </defs>
-            <!-- tank -->
-            <rect x="40" y="20" width="160" height="210" rx="16" fill="#06243f" stroke="#2f6b92" stroke-width="2"/>
-            <rect id="socFill" x="44" y="120" width="152" height="106" rx="12" fill="url(#coldFill)" opacity="0.9"/>
-            <text x="120" y="16" text-anchor="middle" fill="#7a93a8" font-family="JetBrains Mono" font-size="10">fulladet · −28 °C</text>
-            <text x="120" y="246" text-anchor="middle" fill="#7a93a8" font-family="JetBrains Mono" font-size="10">utladet · −18 °C</text>
-            <!-- band markers -->
-            <g stroke="rgba(255,255,255,.18)" stroke-dasharray="3 5"><line x1="44" y1="64" x2="196" y2="64"/><line x1="44" y1="170" x2="196" y2="170"/></g>
-            <!-- side readout -->
-            <g transform="translate(222,40)" font-family="JetBrains Mono">
-              <text x="0" y="0" fill="#7a93a8" font-size="11">tilstand</text>
-              <text id="socState" x="0" y="26" fill="#47D7AC" font-size="20" font-weight="700">LADER</text>
-              <text x="0" y="70" fill="#7a93a8" font-size="11">SoC</text>
-              <text id="socPct" x="0" y="96" fill="#fff" font-size="30" font-weight="700">72%</text>
-              <text x="0" y="138" fill="#7a93a8" font-size="11">kulde-effekt</text>
-              <text id="socPower" x="0" y="162" fill="#47D7AC" font-size="16" font-weight="600">+64 kW</text>
-            </g>
-          </svg>
-        </div>
-      </div>
-    </div>
-
-    <div class="callout rv d2" style="margin-top:36px">
-      <span class="ci"><svg viewBox="0 0 24 24"><use href="#ic-check"/></svg></span>
-      <p>Hver grad ekstra overkjøling er lagret energi. Svalinn Technology beregner kontinuerlig hvor mye kulde det lønner seg å «lade opp» nå mot forventet pris og solproduksjon senere — <b>uten</b> å gå utenfor temperaturbåndet som sikrer varekvalitet.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== BESLUTNINGSMOTOREN (4 steg) ===================== -->
-<section class="sec" id="motor">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <div class="kicker"><span class="ko">04</span><span class="dash"></span>Beslutningsmotoren</div>
-      <h2 class="h-xl">Fire steg, kjørt i en kontinuerlig sløyfe.</h2>
-      <p class="lead">Fra rådata til setpunkt. Hvert steg er bygd for å være robust mot manglende data og trygt innenfor anleggets fysiske grenser.</p>
-    </div>
-
-    <!-- STEP 1 -->
-    <div class="step rv">
-      <div class="step-rail"><span class="sn"><svg viewBox="0 0 24 24"><use href="#ic-collect"/></svg></span><span class="sline"></span></div>
-      <div class="step-body">
-        <div class="step-kick">Steg 01 · Datafangst</div>
-        <h3>Samle, normalisere og kvalitetssikre</h3>
-        <p class="step-lead">Alle datastrømmer hentes inn, tidsstemples mot felles tidsbase og valideres. Svalinn Technology håndterer hull, sensordrift og forsinkede prognoser slik at optimaliseringen aldri står uten beslutningsgrunnlag.</p>
-        <div class="step-detail-grid">
-          <div class="dcard">
-            <h4><span class="di"><svg viewBox="0 0 24 24"><use href="#ic-database"/></svg></span>Datapunkter (typisk)</h4>
-            <ul>
-              <li><b>Pris:</b> spotpris per time/15 min, nettleie- og effekttariffstruktur</li>
-              <li><b>Vær:</b> utetemperatur, globalstråling, skydekke, vind</li>
-              <li><b>Anlegg:</b> rom-/varetemperatur, fordampertrykk, kompressorstatus, drifttimer</li>
-              <li><b>Energi:</b> solproduksjon, total-effekt, fordeling per kurs</li>
-            </ul>
-          </div>
-          <div class="dcard">
-            <h4><span class="di"><svg viewBox="0 0 24 24"><use href="#ic-pulse"/></svg></span>Kvalitetssikring</h4>
-            <ul>
-              <li><b>Validering:</b> områdesjekk, frysing-/spike-deteksjon på sensorer</li>
-              <li><b>Imputering:</b> hull fylles med modellbaserte estimater</li>
-              <li><b>Resampling:</b> alt løftes til felles 15-min oppløsning</li>
-              <li class="deep"><b>Versjonering:</b> hver beslutning logges med datagrunnlaget den ble tatt på</li>
-            </ul>
+          <div class="hero-stats rv in d4">
+            <div class="st">
+              <b>80–100<span class="u">%</span></b
+              ><span>egenbruk av solstrøm (fra 35–40 %)</span>
+            </div>
+            <div class="st">
+              <b>0<span class="u">kr</span></b
+              ><span>investering i nytt kuldeanlegg</span>
+            </div>
+            <div class="st">
+              <b>24/7</b><span>kontinuerlig optimalisering</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </header>
 
-    <!-- STEP 2 -->
-    <div class="step rv">
-      <div class="step-rail"><span class="sn"><svg viewBox="0 0 24 24"><use href="#ic-analyse"/></svg></span><span class="sline"></span></div>
-      <div class="step-body">
-        <div class="step-kick">Steg 02 · Analyse &amp; prediksjon</div>
-        <h3>Prognoser for behov, sol og pris</h3>
-        <p class="step-lead">Optimalisering er bare så god som prognosene den får. Svalinn Technology bygger en time-for-time-modell av neste døgn: hvor mye kulde anlegget vil trenge, hvor mye sol som kommer, og hvordan prisen utvikler seg.</p>
-        <div class="step-detail-grid">
-          <div class="dcard">
-            <h4><span class="di"><svg viewBox="0 0 24 24"><use href="#ic-trenddown"/></svg></span>Kuldebehov &amp; termisk modell</h4>
-            <ul>
-              <li>Behovsprognose drevet av <b>utetemperatur, åpningstid og historisk last</b></li>
-              <li>Termisk modell knytter kuldeeffekt til temperaturendring (lade-/utladerate)</li>
-              <li class="deep">Læres per bygg: tidskonstant og tap kalibreres mot målt respons</li>
-            </ul>
+    <!-- ===================== PROBLEM ===================== -->
+    <section class="sec alt" id="problem">
+      <div class="wrap">
+        <div class="sec-head rv sl">
+          <div class="kicker">
+            <span class="ko">01</span><span class="dash"></span>Problemet
           </div>
-          <div class="dcard">
-            <h4><span class="di"><svg viewBox="0 0 24 24"><use href="#ic-weather"/></svg></span>Sol- &amp; prisprognose</h4>
-            <ul>
-              <li>Solproduksjon fra <b>stråling × anleggsmodell</b> (kWp, vinkel, virkningsgrad)</li>
-              <li>Prisbane fra spotmarked + nettleie/effekttariff</li>
-              <li class="deep">Prognosene oppdateres rullerende; usikkerhet håndteres med margin i optimaliseringen</li>
-            </ul>
-          </div>
+          <h2 class="h-xl">
+            Et kuldeanlegg betaler tre regninger samtidig —&nbsp;og de toppes
+            til feil tid.
+          </h2>
+          <p class="lead">
+            Et kjøle- og frysebygg må holde temperatur døgnet rundt.<br />Uten
+            styring kjøpes energi «når man tilfeldigvis trenger den»<br />ofte i
+            de dyreste timene, med dårlig utnyttelse av egen sol.<br />Svalinn
+            Technology angriper alle tre kostnadsdriverne.
+          </p>
         </div>
-      </div>
-    </div>
 
-    <!-- STEP 3 -->
-    <div class="step rv">
-      <div class="step-rail"><span class="sn"><svg viewBox="0 0 24 24"><use href="#ic-optimize"/></svg></span><span class="sline"></span></div>
-      <div class="step-body">
-        <div class="step-kick">Steg 03 · Optimalisering</div>
-        <h3>Kostnadsminimering under fysiske grenser</h3>
-        <p class="step-lead">Kjernen i Svalinn Technology er et matematisk optimaliseringsproblem som planlegger kulde­produksjonen over hele horisonten (typisk 24–48 timer) på én gang — slik at billige og solrike timer brukes til å «lade», og dyre timer dekkes fra lager.</p>
-        <div class="objective deep">
-          <span class="obj-op">Målfunksjon · minimér</span>
-          <div class="obj-eq"><b>Σ</b><sub>t</sub> ( pris<sub>t</sub> · P<sub>nett,t</sub> ) <span class="op">+</span> effekttariff · max( P<sub>nett</sub> )</div>
-          <span class="obj-tag">samlet energikostnad over planhorisonten (24–48 timer)</span>
-
-          <span class="obj-sub">Innenfor rammene</span>
-          <div class="obj-constraints">
-            <div class="oc"><span class="oc-l">Varekvalitet</span><span class="oc-m">T<sub>min</sub> ≤ T<sub>lager,t</sub> ≤ T<sub>max</sub></span></div>
-            <div class="oc"><span class="oc-l">Maskinkapasitet</span><span class="oc-m">0 ≤ P<sub>kulde,t</sub> ≤ P<sub>maks</sub></span></div>
-            <div class="oc"><span class="oc-l">Energibalanse · lager</span><span class="oc-m">SoC<sub>t+1</sub> = SoC<sub>t</sub> + η·P<sub>kulde,t</sub> − behov<sub>t</sub> − tap</span></div>
-            <div class="oc"><span class="oc-l">Netteffekt</span><span class="oc-m">P<sub>nett,t</sub> = P<sub>kulde,t</sub> + last<sub>t</sub> − sol<sub>t</sub></span></div>
+        <div class="grid-3">
+          <div class="card rv sr">
+            <span class="num">A · ENERGI (kWh)</span>
+            <div class="cic">
+              <svg viewBox="0 0 24 24"><use href="#ic-price" /></svg>
+            </div>
+            <h3>Spotpris varierer 5–10×</h3>
+            <p>
+              Prisen svinger time for time. Et anlegg uten styring kjøper like
+              mye kulde-energi kl. 08 (dyrt) som kl. 13 (billig/solrikt). Hver
+              forflyttet kWh fra dyr til billig time er ren besparelse.
+            </p>
           </div>
-        </div>
-        <div class="step-detail-grid" style="margin-top:18px">
-          <div class="dcard">
-            <h4><span class="di"><svg viewBox="0 0 24 24"><use href="#ic-target"/></svg></span>Hva som balanseres</h4>
-            <ul>
-              <li><b>Energikost</b> — flytt forbruk til billige/solrike timer</li>
-              <li><b>Effekttopp</b> — hold høyeste kW under tariffgrensen</li>
-              <li><b>Egenbruk sol</b> — absorber overskudd i lageret</li>
-              <li><b>Varekvalitet</b> — alltid innenfor temperaturbånd</li>
-            </ul>
+          <div class="card rv sr">
+            <span class="num">B · EFFEKT (kW)</span>
+            <div class="cic">
+              <svg viewBox="0 0 24 24"><use href="#ic-power" /></svg>
+            </div>
+            <h3>Effekttariffen straffer topper</h3>
+            <p>
+              Nettleien betales i stor grad for høyeste effektuttak i måneden.
+              Når kuldemaskinen starter samtidig med resten av driften, skapes
+              en topp som koster hele måneden. Lastutjevning kutter denne
+              toppen.
+            </p>
           </div>
-          <div class="dcard">
-            <h4><span class="di"><svg viewBox="0 0 24 24"><use href="#ic-cpu"/></svg></span>Metode</h4>
-            <ul>
-              <li>Formuleres som <b>rullerende horisont</b> (model predictive control)</li>
-              <li class="deep">Løses som lineært/blandet-heltalls program (MILP) per syklus</li>
-              <li class="deep">Planen reoptimaliseres når nye data ankommer — bare første steg sendes ut</li>
-              <li class="deep">Reoptimaliserer typisk hvert <b>5.–15. minutt</b> og ved nye prognoser</li>
-              <li>Robust mot prognosefeil via marginer og hyppig oppdatering</li>
-            </ul>
+          <div class="card rv sr">
+            <span class="num">C · SOL (egenbruk)</span>
+            <div class="cic">
+              <svg viewBox="0 0 24 24"><use href="#ic-vsolar" /></svg>
+            </div>
+            <h3>Solstrøm går tapt</h3>
+            <p>
+              Midt på dagen produserer solcellene mer enn anlegget bruker. Uten
+              et sted å «lagre» overskuddet selges det billig ut på nettet —
+              typisk utnyttes bare <span class="hl">35–40 %</span> av egen
+              produksjon.
+            </p>
           </div>
         </div>
-      </div>
-    </div>
 
-    <!-- STEP 4 -->
-    <div class="step rv">
-      <div class="step-rail"><span class="sn"><svg viewBox="0 0 24 24"><use href="#ic-signal"/></svg></span></div>
-      <div class="step-body">
-        <div class="step-kick">Steg 04 · Styringssignaler</div>
-        <h3>Setpunkt ut til anlegget — trygt og sporbart</h3>
-        <p class="step-lead">Optimaliseringens første tidssteg oversettes til konkrete setpunkt og sendes til eksisterende automasjon. Anlegget utfører; Svalinn Technology observerer resultatet og lukker sløyfen.</p>
-        <div class="step-detail-grid">
-          <div class="dcard">
-            <h4><span class="di"><svg viewBox="0 0 24 24"><use href="#ic-automation"/></svg></span>Hva som sendes</h4>
-            <ul>
-              <li><b>Temperatur-setpunkt</b> innenfor godkjent bånd</li>
-              <li><b>Kapasitet / på-av</b> for kuldemaskin der det støttes</li>
-              <li>Lade- / hold- / tøm-modus for termisk lager</li>
-            </ul>
+        <div class="callout rv sl d2" style="margin-top: 30px">
+          <span class="ci"
+            ><svg viewBox="0 0 24 24"><use href="#ic-spark" /></svg>
+          </span>
+          <p>
+            <b>Innsikten:</b> kulde er lagringsbar energi. Et fryselager har
+            enorm termisk masse — det kan «overkjøles» når strømmen er billig og
+            solrik, og deretter
+            <span class="mint">tære på den lagrede kulden</span> når strømmen er
+            dyr. Bygget blir et batteri du allerede eier. Svalinn Technology er
+            styringen som faktisk utnytter det.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ARKITEKTUR ===================== -->
+    <section class="sec" id="arkitektur">
+      <div class="wrap">
+        <div class="sec-head rv sr">
+          <div class="kicker">
+            <span class="ko">02</span><span class="dash"></span>Systemarkitektur
           </div>
-          <div class="dcard">
-            <h4><span class="di"><svg viewBox="0 0 24 24"><use href="#ic-shield"/></svg></span>Sikkerhet &amp; sporbarhet</h4>
-            <ul>
-              <li><b>Failsafe:</b> ved brudd faller anlegget til siste gyldige modus</li>
-              <li>Lokale regulatorer beholder alarm- og sikkerhetslogikk</li>
-              <li class="deep">Hver kommando logges → full sporbarhet i kundeportalen</li>
-            </ul>
-          </div>
+          <h2 class="h-xl">
+            Et lag over anlegget — ikke en erstatning for det.
+          </h2>
+          <p class="lead">
+            Svalinn Technology integreres mot eksisterende styringssystemer og
+            leser/skriver via etablerte grensesnitt. Anlegget fortsetter å gå
+            som før; Svalinn Technology flytter <em>når</em> ting skjer for å
+            treffe pris, effekt og sol optimalt.
+          </p>
         </div>
-        <div class="callout" style="margin-top:22px">
-          <span class="ci"><svg viewBox="0 0 24 24"><use href="#ic-link"/></svg></span>
-          <p><b>Sløyfen lukkes:</b> resultatet av hvert tiltak måles og mates tilbake til steg 01. Slik blir den termiske modellen og prognosene bedre over tid — og mer data fra flere bygg gjør hele systemet smartere.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ===================== DØGNET (SIM) ===================== -->
-<section class="sec alt" id="dognet">
-  <div class="wrap">
-    <div class="sec-head rv sl">
-      <div class="kicker"><span class="ko">05</span><span class="dash"></span>Et døgn i drift</div>
-      <h2 class="h-xl">Se optimaliseringen ta beslutninger time for time.</h2>
-      <p class="lead">Dra i tidslinjen eller spill av døgnet. Sammenlign et anlegg uten styring mot Svalinn Technology — og se hvordan kulde flyttes fra dyre timer til billige og solrike.</p>
-    </div>
+        <div class="arch rv sl d1">
+          <div class="arch-grid">
+            <!-- Layer 1: data inn -->
+            <div class="arch-layer">
+              <div class="arch-lhead">
+                <span class="ln b"
+                  ><svg viewBox="0 0 24 24"><use href="#ic-database" /></svg>
+                </span>
+                <h4>Datakilder inn</h4>
+                <span class="meta">datainnsamling · API &amp; sensorer</span>
+              </div>
+              <div class="node-row">
+                <div class="anode">
+                  <span class="ai"
+                    ><svg viewBox="0 0 24 24">
+                      <use href="#ic-price" /></svg></span
+                  ><span class="an">Spotpris</span
+                  ><span class="as">Nord Pool, time/15 min</span>
+                </div>
+                <div class="anode">
+                  <span class="ai"
+                    ><svg viewBox="0 0 24 24">
+                      <use href="#ic-weather" /></svg></span
+                  ><span class="an">Værvarsel</span
+                  ><span class="as">temp, sol, vind</span>
+                </div>
+                <div class="anode">
+                  <span class="ai"
+                    ><svg viewBox="0 0 24 24">
+                      <use href="#ic-thermo" /></svg></span
+                  ><span class="an">Driftsdata</span
+                  ><span class="as">romtemp, fordamper</span>
+                </div>
+                <div class="anode">
+                  <span class="ai"
+                    ><svg viewBox="0 0 24 24">
+                      <use href="#ic-vsolar" /></svg></span
+                  ><span class="an">Solproduksjon</span
+                  ><span class="as">vekselretter, live</span>
+                </div>
+                <div class="anode">
+                  <span class="ai"
+                    ><svg viewBox="0 0 24 24">
+                      <use href="#ic-gauge" /></svg></span
+                  ><span class="an">Effektmåling</span
+                  ><span class="as">AMS / kW-måler</span>
+                </div>
+              </div>
+            </div>
 
-    <div class="sim rv sr d1" id="sim">
-      <div class="sim-top">
-        <div class="sim-clock">
-          <span class="ct" id="simClock">13:00</span>
-          <span class="cp"><span class="ph" id="simPhase">SOL</span><span class="pd" id="simPhaseDesc">Overskudd dekker drift — lader lager</span></span>
-        </div>
-        <div class="sim-mode" id="simMode">
-          <button data-mode="svalinn" class="active">Med Svalinn Technology</button>
-          <button data-mode="naive">Uten styring</button>
-        </div>
-      </div>
+            <div class="flow-arrow">
+              <svg viewBox="0 0 24 24"><use href="#ic-down" /></svg>
+            </div>
 
-      <div class="sim-chart-wrap">
-        <svg class="sim-chart" id="simChart" viewBox="0 0 1000 320" preserveAspectRatio="none"></svg>
-      </div>
+            <!-- Core -->
+            <div class="arch-core">
+              <div class="core-head">
+                <span class="core-brain"
+                  ><svg viewBox="0 0 24 24"><use href="#ic-brain" /></svg>
+                </span>
+                <div>
+                  <b>Svalinn Technology</b
+                  ><span>beslutningsmotor · skybasert optimalisering</span>
+                </div>
+              </div>
+              <div class="core-steps">
+                <div class="core-step">
+                  <span class="cs-n">01</span>
+                  <h5>Datafangst</h5>
+                  <p>Normaliserer og kvalitetssikrer alle strømmer</p>
+                </div>
+                <div class="core-step">
+                  <span class="cs-n">02</span>
+                  <h5>Prediksjon</h5>
+                  <p>Prognoser for behov, sol og pris</p>
+                </div>
+                <div class="core-step">
+                  <span class="cs-n">03</span>
+                  <h5>Optimalisering</h5>
+                  <p>Løser kostnadsminimering med driftsgrenser</p>
+                </div>
+                <div class="core-step">
+                  <span class="cs-n">04</span>
+                  <h5>Styring</h5>
+                  <p>Sender setpunkt til anlegget</p>
+                </div>
+              </div>
+            </div>
 
-      <div class="sim-legend">
-        <span class="sl"><span class="sw" style="background:#00629B"></span>Spotpris</span>
-        <span class="sl"><span class="sw" style="background:#ffb020"></span>Solproduksjon</span>
-        <span class="sl"><span class="sw" style="background:#59CBE8"></span>Kuldeproduksjon</span>
-        <span class="sl"><span class="sw fill" style="background:rgba(71,215,172,.5)"></span>Lagernivå (SoC)</span>
-        <span class="sl"><span class="sw" style="background:#ff6b4a"></span>Nettkjøp</span>
-      </div>
+            <div class="flow-arrow">
+              <svg viewBox="0 0 24 24"><use href="#ic-down" /></svg>
+            </div>
 
-      <div class="sim-track" id="simTrack">
-        <div class="axis"><div class="fill" id="simFill"></div></div>
-        <div class="marker" id="simMarker"></div>
-        <div class="ticks"><span>00</span><span>06</span><span>12</span><span>18</span><span>24</span></div>
-      </div>
-
-      <div class="sim-readout">
-        <div class="ro decision">
-          <div class="rl"><svg viewBox="0 0 24 24"><use href="#ic-brain"/></svg>Beslutning</div>
-          <div class="rv" id="roDecision">Soloverskudd dekker drift og lader termisk lager. Null kjøp fra nett.</div>
-        </div>
-        <div class="ro">
-          <div class="rl"><svg viewBox="0 0 24 24"><use href="#ic-price"/></svg>Spotpris</div>
-          <div class="rv" id="roPrice">0,45<span class="u">kr/kWh</span></div>
-        </div>
-        <div class="ro">
-          <div class="rl"><svg viewBox="0 0 24 24"><use href="#ic-grid"/></svg>Nettkjøp</div>
-          <div class="rv" id="roGrid">8<span class="u">kW</span></div>
-        </div>
-        <div class="ro">
-          <div class="rl"><svg viewBox="0 0 24 24"><use href="#ic-cube"/></svg>Lagernivå</div>
-          <div class="rv" id="roSoc">70<span class="u">%</span></div>
-        </div>
-      </div>
-
-      <div class="sim-controls">
-        <button class="play-btn" id="simPlay" aria-label="Spill av døgn"><svg viewBox="0 0 24 24"><use href="#ic-play"/></svg></button>
-        <span class="sim-hint" id="simHint">Spill av for å se hele døgnet — eller dra i tidslinjen.</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== VERDI ===================== -->
-<section class="sec" id="verdi">
-  <div class="wrap">
-    <div class="sec-head rv sr">
-      <div class="kicker"><span class="ko">06</span><span class="dash"></span>Hvorfor det lønner seg</div>
-      <h2 class="h-xl">Målbar effekt — på samme anlegg.</h2>
-      <p class="lead">Resultatene følger direkte av de tre kostnadsdriverne. Alt dokumenteres automatisk, så effekten kan etterprøves.</p>
-    </div>
-
-    <div class="value-grid">
-      <div class="vcard rv sl d1">
-        <div class="vic"><svg viewBox="0 0 24 24"><use href="#ic-vsolar"/></svg></div>
-        <div class="vbig">Høyere</div>
-        <h4>Egenbruk av solstrøm</h4>
-        <p>Fra <span class="numhl">35–40 %</span> til <span class="numhl">80–100 %</span> — overskudd absorberes i det termiske lageret i stedet for å selges billig ut på nettet.</p>
-      </div>
-      <div class="vcard rv sl d2">
-        <div class="vic"><svg viewBox="0 0 24 24"><use href="#ic-trenddown"/></svg></div>
-        <div class="vbig">Lavere</div>
-        <h4>Kjøp i dyre timer</h4>
-        <p>Energi forflyttes fra pristoppene om morgenen og kvelden til billige timer midt på dagen og natten.</p>
-      </div>
-      <div class="vcard rv sl d3">
-        <div class="vic"><svg viewBox="0 0 24 24"><use href="#ic-power"/></svg></div>
-        <div class="vbig">Kuttet</div>
-        <h4>Effekttopp</h4>
-        <p>Lastutjevning holder det høyeste effektuttaket nede — som direkte reduserer effekttariffen.</p>
-      </div>
-      <div class="vcard rv sr d1">
-        <div class="vic"><svg viewBox="0 0 24 24"><use href="#ic-cube2"/></svg></div>
-        <div class="vbig">Bygget</div>
-        <h4>som termisk batteri</h4>
-        <p>Fleksibilitet du allerede eier, tatt i bruk uten ny maskininvestering eller kjemiske batterier.</p>
-      </div>
-      <div class="vcard rv sr d2">
-        <div class="vic"><svg viewBox="0 0 24 24"><use href="#ic-leaf"/></svg></div>
-        <div class="vbig">Lavere</div>
-        <h4>CO₂-avtrykk</h4>
-        <p>Mer fornybar egenprodusert strøm og mindre kjøp i timer med skitten/dyr marginalkraft.</p>
-      </div>
-      <div class="vcard rv sr d3">
-        <div class="vic"><svg viewBox="0 0 24 24"><use href="#ic-doccheck"/></svg></div>
-        <div class="vbig">Dokumentert</div>
-        <h4>Effekt &amp; sporbarhet</h4>
-        <p>Hver beslutning og besparelse logges og samles i kundeportalen — etterprøvbart.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== PORTAL / INTEGRASJON ===================== -->
-<section class="sec alt" id="portal">
-  <div class="wrap">
-    <div class="split wide-left">
-      <div class="rv sl">
-        <div class="kicker"><span class="ko">07</span><span class="dash"></span>Digital flate</div>
-        <h2 class="h-xl" style="margin:18px 0 18px">Full oversikt — sanntid og dokumentasjon.</h2>
-        <p class="lead">Kundeportalen viser hva systemet gjør og hvorfor: sanntidsdrift, solutnyttelse, effektprofil, besparelser og varsler. Alt som ligger til grunn for en beslutning er sporbart.</p>
-        <div class="chip-row" style="margin-top:24px">
-          <span class="chip tag-data"><span class="d"></span>Vendor-agnostisk integrasjon</span>
-          <span class="chip tag-energy"><span class="d"></span>Ingen ny maskininvestering</span>
-          <span class="chip tag-control"><span class="d"></span>Skriver kun i godkjente bånd</span>
-          <span class="chip tag-cold"><span class="d"></span>Failsafe ved brudd</span>
-        </div>
-      </div>
-
-      <div class="portal-card rv sr d1">
-        <div class="portal-bar">
-          <span class="pl"><svg viewBox="0 0 24 24"><use href="#ic-portal"/></svg></span>
-          <div><b>Svalinn Kundeportal</b><span>sanntid · historikk · dokumentasjon</span></div>
-          <span class="live" style="margin-left:auto"><span class="dot"></span>LIVE</span>
-        </div>
-        <div class="portal-body single">
-          <div class="pfeat">
-            <div class="pf"><span class="pi"><svg viewBox="0 0 24 24"><use href="#ic-monitor"/></svg></span><div><b>Dashboard</b><span>Sanntid og historikk</span></div></div>
-            <div class="pf"><span class="pi"><svg viewBox="0 0 24 24"><use href="#ic-insight"/></svg></span><div><b>Innsikt</b><span>Energi, sol, effekt, drift</span></div></div>
-            <div class="pf"><span class="pi"><svg viewBox="0 0 24 24"><use href="#ic-doc"/></svg></span><div><b>Rapporter</b><span>Automatisk dokumentasjon</span></div></div>
-            <div class="pf"><span class="pi"><svg viewBox="0 0 24 24"><use href="#ic-piggy"/></svg></span><div><b>Besparelser</b><span>Etterprøvbar effekt</span></div></div>
-            <div class="pf"><span class="pi"><svg viewBox="0 0 24 24"><use href="#ic-bell"/></svg></span><div><b>Varsler</b><span>Avvik, feil, optimalisering</span></div></div>
+            <!-- Layer 3: control to existing automation -->
+            <div class="arch-layer">
+              <div class="arch-lhead">
+                <span class="ln c"
+                  ><svg viewBox="0 0 24 24"><use href="#ic-signal" /></svg>
+                </span>
+                <h4>Styring ut → eksisterende automasjon</h4>
+                <span class="meta">setpunkt-skriving · vendor-agnostisk</span>
+              </div>
+              <div class="node-row">
+                <div class="anode">
+                  <span class="ai"
+                    ><svg viewBox="0 0 24 24">
+                      <use href="#ic-automation" /></svg></span
+                  ><span class="an">SD-anlegg</span
+                  ><span class="as">Kiona, Danfoss, JCI, Siemens</span>
+                </div>
+                <div class="anode eng">
+                  <span class="ai"
+                    ><svg viewBox="0 0 24 24">
+                      <use href="#ic-chiller" /></svg></span
+                  ><span class="an">Kuldemaskin</span
+                  ><span class="as">kapasitet / på-av</span>
+                </div>
+                <div class="anode eng">
+                  <span class="ai"
+                    ><svg viewBox="0 0 24 24">
+                      <use href="#ic-cube" /></svg></span
+                  ><span class="an">Termisk lager</span
+                  ><span class="as">setpunkt-bånd</span>
+                </div>
+                <div class="anode eng">
+                  <span class="ai"
+                    ><svg viewBox="0 0 24 24">
+                      <use href="#ic-battery" /></svg></span
+                  ><span class="an">Evt. batteri</span
+                  ><span class="as">el-lagring</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
+        <div class="grid-2 rv sr d2" style="margin-top: 30px">
+          <div class="card">
+            <h4>
+              <span style="color: var(--accent)"
+                >Ligger oppå — rører ikke sikkerhetslogikk</span
+              >
+            </h4>
+            <p>
+              Svalinn Technology skriver kun innenfor godkjente setpunkt-bånd.
+              Lokale regulatorer beholder alle sikkerhets- og alarmfunksjoner.
+              Faller forbindelsen bort, fortsetter anlegget på siste gyldige
+              driftsmodus.
+            </p>
+          </div>
+          <div class="card">
+            <h4>
+              <span style="color: var(--accent)"
+                >Samme logikk styrer hele energisystemet</span
+              >
+            </h4>
+            <p>
+              Der bygget også har varmepumpe, energibrønner og nærvarme, kan
+              samme beslutningsmotor koordinere disse — overskuddsvarme fra
+              kuldeproduksjon lades til brønnene, kulde til termisk lager.
+              <span class="hl" style="display: block; margin-top: 8px"
+                >Ett optimaliseringsproblem, flere fleksible ressurser.</span
+              >
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ===================== CTA ===================== -->
-<section class="sec" id="kontakt">
-  <div class="wrap">
-    <div class="cta rv sb">
-      <div class="kicker" style="justify-content:center;margin-bottom:18px"><span class="dash"></span>Neste steg<span class="dash"></span></div>
-      <h2 class="h-xl">Ta en teknisk gjennomgang av deres anlegg.</h2>
-      <p class="lead">Vi kartlegger datakilder, SD-anlegg og termisk lagerpotensial — og estimerer effekten på pris, effekttopp og solutnyttelse for nettopp deres bygg.</p>
-      <div class="cta-actions">
-        <a href="#" class="btn primary"><svg viewBox="0 0 24 24"><use href="#ic-spark"/></svg>Book teknisk gjennomgang</a>
+    <!-- ===================== TERMISK BATTERI ===================== -->
+    <section class="sec alt" id="batteri">
+      <div class="wrap">
+        <div class="split wide-right">
+          <div class="rv">
+            <div class="kicker">
+              <span class="ko">03</span><span class="dash"></span>Termisk
+              batteri
+            </div>
+            <h2 class="h-xl" style="margin: 18px 0 20px">
+              Fysikken: bygget lagrer kulde, ikke strøm.
+            </h2>
+            <p class="lead" style="margin-bottom: 24px">
+              I stedet for dyre kjemiske batterier brukes byggets egen termiske
+              masse — varer, luft og konstruksjon — som lager. Svalinn
+              Technology produserer ekstra kulde når energien er billig/grønn,
+              og lar temperaturen «drive» innenfor et tillatt bånd når den er
+              dyr.
+            </p>
+            <div class="spec">
+              <div class="row">
+                <span class="k">Fryselager — setpunktbånd</span
+                ><span class="v"
+                  ><span class="cold">−28 °C</span> ↔
+                  <span class="cold">−18 °C</span></span
+                >
+              </div>
+              <div class="row">
+                <span class="k">Kjølelager — setpunktbånd</span
+                ><span class="v"
+                  ><span class="warm">+2 °C</span> ↔
+                  <span class="warm">+4 °C</span></span
+                >
+              </div>
+              <div class="row">
+                <span class="k">Lademodus</span
+                ><span class="v">overkjøling mot nedre grense</span>
+              </div>
+              <div class="row">
+                <span class="k">Utlading</span
+                ><span class="v">drift mot øvre grense</span>
+              </div>
+              <div class="row">
+                <span class="k">Tap / selvutlading</span
+                ><span class="v">lav — tung isolert masse</span>
+              </div>
+              <div class="row">
+                <span class="k">Ekstra slitasje</span
+                ><span class="v">ingen — innenfor godkjent bånd</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- thermal store viz -->
+          <div class="rv d1">
+            <div class="hero-card" style="padding: 26px">
+              <div class="hc-top">
+                <div class="hc-title">
+                  <span class="ic"
+                    ><svg viewBox="0 0 24 24">
+                      <use href="#ic-cube" /></svg></span
+                  >Lagringsnivå (SoC)
+                </div>
+                <span class="chip tag-cold"
+                  ><span class="d"></span>termisk</span
+                >
+              </div>
+              <svg viewBox="0 0 360 250" style="width: 100%; display: block">
+                <defs>
+                  <linearGradient id="coldFill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#7fe3ff" />
+                    <stop offset="1" stop-color="#2aa7d6" />
+                  </linearGradient>
+                </defs>
+                <!-- tank -->
+                <rect
+                  x="40"
+                  y="20"
+                  width="160"
+                  height="210"
+                  rx="16"
+                  fill="#06243f"
+                  stroke="#2f6b92"
+                  stroke-width="2"
+                />
+                <rect
+                  id="socFill"
+                  x="44"
+                  y="120"
+                  width="152"
+                  height="106"
+                  rx="12"
+                  fill="url(#coldFill)"
+                  opacity="0.9"
+                />
+                <text
+                  x="120"
+                  y="16"
+                  text-anchor="middle"
+                  fill="#7a93a8"
+                  font-family="JetBrains Mono"
+                  font-size="10"
+                >
+                  fulladet · −28 °C
+                </text>
+                <text
+                  x="120"
+                  y="246"
+                  text-anchor="middle"
+                  fill="#7a93a8"
+                  font-family="JetBrains Mono"
+                  font-size="10"
+                >
+                  utladet · −18 °C
+                </text>
+                <!-- band markers -->
+                <g stroke="rgba(255,255,255,.18)" stroke-dasharray="3 5">
+                  <line x1="44" y1="64" x2="196" y2="64" />
+                  <line x1="44" y1="170" x2="196" y2="170" />
+                </g>
+                <!-- side readout -->
+                <g transform="translate(222,40)" font-family="JetBrains Mono">
+                  <text x="0" y="0" fill="#7a93a8" font-size="11">
+                    tilstand
+                  </text>
+                  <text
+                    id="socState"
+                    x="0"
+                    y="26"
+                    fill="#47D7AC"
+                    font-size="20"
+                    font-weight="700"
+                  >
+                    LADER
+                  </text>
+                  <text x="0" y="70" fill="#7a93a8" font-size="11">SoC</text>
+                  <text
+                    id="socPct"
+                    x="0"
+                    y="96"
+                    fill="#fff"
+                    font-size="30"
+                    font-weight="700"
+                  >
+                    72%
+                  </text>
+                  <text x="0" y="138" fill="#7a93a8" font-size="11">
+                    kulde-effekt
+                  </text>
+                  <text
+                    id="socPower"
+                    x="0"
+                    y="162"
+                    fill="#47D7AC"
+                    font-size="16"
+                    font-weight="600"
+                  >
+                    +64 kW
+                  </text>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout rv d2" style="margin-top: 36px">
+          <span class="ci"
+            ><svg viewBox="0 0 24 24"><use href="#ic-check" /></svg>
+          </span>
+          <p>
+            Hver grad ekstra overkjøling er lagret energi. Svalinn Technology
+            beregner kontinuerlig hvor mye kulde det lønner seg å «lade opp» nå
+            mot forventet pris og solproduksjon senere — <b>uten</b> å gå
+            utenfor temperaturbåndet som sikrer varekvalitet.
+          </p>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<footer class="foot">
-  <div class="wrap">
-    <div class="foot-grid">
-      <span>SVALINN TECHNOLOGY · INTELLIGENT STYRING AV KULDEANLEGG</span>
-      <span>Teknisk fremstilling · illustrative tall</span>
-    </div>
-    <div class="foot-credit">
-      <span>Designet og utviklet av <b>TRE</b></span>
-    </div>
-  </div>
-</footer>
+    <!-- ===================== BESLUTNINGSMOTOREN (4 steg) ===================== -->
+    <section class="sec" id="motor">
+      <div class="wrap">
+        <div class="sec-head rv">
+          <div class="kicker">
+            <span class="ko">04</span
+            ><span class="dash"></span>Beslutningsmotoren
+          </div>
+          <h2 class="h-xl">Fire steg, kjørt i en kontinuerlig sløyfe.</h2>
+          <p class="lead">
+            Fra rådata til setpunkt. Hvert steg er bygd for å være robust mot
+            manglende data og trygt innenfor anleggets fysiske grenser.
+          </p>
+        </div>
 
-<div id="tweaks-root"></div>
+        <!-- STEP 1 -->
+        <div class="step rv">
+          <div class="step-rail">
+            <span class="sn"
+              ><svg viewBox="0 0 24 24"><use href="#ic-collect" /></svg></span
+            ><span class="sline"></span>
+          </div>
+          <div class="step-body">
+            <div class="step-kick">Steg 01 · Datafangst</div>
+            <h3>Samle, normalisere og kvalitetssikre</h3>
+            <p class="step-lead">
+              Alle datastrømmer hentes inn, tidsstemples mot felles tidsbase og
+              valideres. Svalinn Technology håndterer hull, sensordrift og
+              forsinkede prognoser slik at optimaliseringen aldri står uten
+              beslutningsgrunnlag.
+            </p>
+            <div class="step-detail-grid">
+              <div class="dcard">
+                <h4>
+                  <span class="di"
+                    ><svg viewBox="0 0 24 24">
+                      <use href="#ic-database" /></svg></span
+                  >Datapunkter (typisk)
+                </h4>
+                <ul>
+                  <li>
+                    <b>Pris:</b> spotpris per time/15 min, nettleie- og
+                    effekttariffstruktur
+                  </li>
+                  <li>
+                    <b>Vær:</b> utetemperatur, globalstråling, skydekke, vind
+                  </li>
+                  <li>
+                    <b>Anlegg:</b> rom-/varetemperatur, fordampertrykk,
+                    kompressorstatus, drifttimer
+                  </li>
+                  <li>
+                    <b>Energi:</b> solproduksjon, total-effekt, fordeling per
+                    kurs
+                  </li>
+                </ul>
+              </div>
+              <div class="dcard">
+                <h4>
+                  <span class="di"
+                    ><svg viewBox="0 0 24 24">
+                      <use href="#ic-pulse" /></svg></span
+                  >Kvalitetssikring
+                </h4>
+                <ul>
+                  <li>
+                    <b>Validering:</b> områdesjekk, frysing-/spike-deteksjon på
+                    sensorer
+                  </li>
+                  <li>
+                    <b>Imputering:</b> hull fylles med modellbaserte estimater
+                  </li>
+                  <li>
+                    <b>Resampling:</b> alt løftes til felles 15-min oppløsning
+                  </li>
+                  <li class="deep">
+                    <b>Versjonering:</b> hver beslutning logges med
+                    datagrunnlaget den ble tatt på
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<script src="teknisk.js?v=33"></script>
-<script>
-/* failsafe: if external JS fails to load, never leave content hidden */
-window.addEventListener('load',function(){
-  setTimeout(function(){
-    if(typeof window.__svalinnApply!=='function'){
-      document.querySelectorAll('.rv').forEach(function(e){e.classList.add('in');});
-    }
-  },1800);
-});
-</script>
+        <!-- STEP 2 -->
+        <div class="step rv">
+          <div class="step-rail">
+            <span class="sn"
+              ><svg viewBox="0 0 24 24"><use href="#ic-analyse" /></svg></span
+            ><span class="sline"></span>
+          </div>
+          <div class="step-body">
+            <div class="step-kick">Steg 02 · Analyse &amp; prediksjon</div>
+            <h3>Prognoser for behov, sol og pris</h3>
+            <p class="step-lead">
+              Optimalisering er bare så god som prognosene den får. Svalinn
+              Technology bygger en time-for-time-modell av neste døgn: hvor mye
+              kulde anlegget vil trenge, hvor mye sol som kommer, og hvordan
+              prisen utvikler seg.
+            </p>
+            <div class="step-detail-grid">
+              <div class="dcard">
+                <h4>
+                  <span class="di"
+                    ><svg viewBox="0 0 24 24">
+                      <use href="#ic-trenddown" /></svg></span
+                  >Kuldebehov &amp; termisk modell
+                </h4>
+                <ul>
+                  <li>
+                    Behovsprognose drevet av
+                    <b>utetemperatur, åpningstid og historisk last</b>
+                  </li>
+                  <li>
+                    Termisk modell knytter kuldeeffekt til temperaturendring
+                    (lade-/utladerate)
+                  </li>
+                  <li class="deep">
+                    Læres per bygg: tidskonstant og tap kalibreres mot målt
+                    respons
+                  </li>
+                </ul>
+              </div>
+              <div class="dcard">
+                <h4>
+                  <span class="di"
+                    ><svg viewBox="0 0 24 24">
+                      <use href="#ic-weather" /></svg></span
+                  >Sol- &amp; prisprognose
+                </h4>
+                <ul>
+                  <li>
+                    Solproduksjon fra <b>stråling × anleggsmodell</b> (kWp,
+                    vinkel, virkningsgrad)
+                  </li>
+                  <li>Prisbane fra spotmarked + nettleie/effekttariff</li>
+                  <li class="deep">
+                    Prognosene oppdateres rullerende; usikkerhet håndteres med
+                    margin i optimaliseringen
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<!-- Tweaks panel (React + Babel) -->
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script type="text/babel" src="tweaks-panel.jsx"></script>
-<script type="text/babel">
-const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "accent": "#47D7AC",
-  "depth": "full",
-  "motion": true
-}/*EDITMODE-END*/;
-function TweaksApp(){
-  const [t,setTweak]=useTweaks(TWEAK_DEFAULTS);
-  React.useEffect(()=>{
-    if(typeof window.__svalinnApply==='function'){
-      window.__svalinnApply({accent:t.accent, depth:t.depth, motion:t.motion?'on':'off'});
-    }
-  },[t.accent,t.depth,t.motion]);
-  return (
-    <TweaksPanel title="Tweaks">
-      <TweakSection label="Visuell" />
-      <TweakColor label="Aksentfarge" value={t.accent}
-        options={['#47D7AC','#59CBE8','#00629B','#008EAA']}
-        onChange={(v)=>setTweak('accent',v)} />
-      <TweakToggle label="Bevegelse / animasjon" value={t.motion}
-        onChange={(v)=>setTweak('motion',v)} />
-      <TweakSection label="Innhold" />
-      <TweakRadio label="Teknisk dybde" value={t.depth}
-        options={['full','enkel']}
-        onChange={(v)=>setTweak('depth',v)} />
-    </TweaksPanel>
-  );
-}
-ReactDOM.createRoot(document.getElementById('tweaks-root')).render(<TweaksApp/>);
-</script>
-</body>
+        <!-- STEP 3 -->
+        <div class="step rv">
+          <div class="step-rail">
+            <span class="sn"
+              ><svg viewBox="0 0 24 24"><use href="#ic-optimize" /></svg></span
+            ><span class="sline"></span>
+          </div>
+          <div class="step-body">
+            <div class="step-kick">Steg 03 · Optimalisering</div>
+            <h3>Kostnadsminimering under fysiske grenser</h3>
+            <p class="step-lead">
+              Kjernen i Svalinn Technology er et matematisk
+              optimaliseringsproblem som planlegger kulde­produksjonen over hele
+              horisonten (typisk 24–48 timer) på én gang — slik at billige og
+              solrike timer brukes til å «lade», og dyre timer dekkes fra lager.
+            </p>
+            <div class="objective deep">
+              <span class="obj-op">Målfunksjon · minimér</span>
+              <div class="obj-eq">
+                <b>Σ</b><sub>t</sub> ( pris<sub>t</sub> · P<sub>nett,t</sub> )
+                <span class="op">+</span> effekttariff · max( P<sub>nett</sub> )
+              </div>
+              <span class="obj-tag"
+                >samlet energikostnad over planhorisonten (24–48 timer)</span
+              >
+
+              <span class="obj-sub">Innenfor rammene</span>
+              <div class="obj-constraints">
+                <div class="oc">
+                  <span class="oc-l">Varekvalitet</span
+                  ><span class="oc-m"
+                    >T<sub>min</sub> ≤ T<sub>lager,t</sub> ≤ T<sub
+                      >max</sub
+                    ></span
+                  >
+                </div>
+                <div class="oc">
+                  <span class="oc-l">Maskinkapasitet</span
+                  ><span class="oc-m"
+                    >0 ≤ P<sub>kulde,t</sub> ≤ P<sub>maks</sub></span
+                  >
+                </div>
+                <div class="oc">
+                  <span class="oc-l">Energibalanse · lager</span
+                  ><span class="oc-m"
+                    >SoC<sub>t+1</sub> = SoC<sub>t</sub> + η·P<sub>kulde,t</sub>
+                    − behov<sub>t</sub> − tap</span
+                  >
+                </div>
+                <div class="oc">
+                  <span class="oc-l">Netteffekt</span
+                  ><span class="oc-m"
+                    >P<sub>nett,t</sub> = P<sub>kulde,t</sub> + last<sub>t</sub>
+                    − sol<sub>t</sub></span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="step-detail-grid" style="margin-top: 18px">
+              <div class="dcard">
+                <h4>
+                  <span class="di"
+                    ><svg viewBox="0 0 24 24">
+                      <use href="#ic-target" /></svg></span
+                  >Hva som balanseres
+                </h4>
+                <ul>
+                  <li>
+                    <b>Energikost</b> — flytt forbruk til billige/solrike timer
+                  </li>
+                  <li>
+                    <b>Effekttopp</b> — hold høyeste kW under tariffgrensen
+                  </li>
+                  <li><b>Egenbruk sol</b> — absorber overskudd i lageret</li>
+                  <li><b>Varekvalitet</b> — alltid innenfor temperaturbånd</li>
+                </ul>
+              </div>
+              <div class="dcard">
+                <h4>
+                  <span class="di"
+                    ><svg viewBox="0 0 24 24"><use href="#ic-cpu" /></svg></span
+                  >Metode
+                </h4>
+                <ul>
+                  <li>
+                    Formuleres som <b>rullerende horisont</b> (model predictive
+                    control)
+                  </li>
+                  <li class="deep">
+                    Løses som lineært/blandet-heltalls program (MILP) per syklus
+                  </li>
+                  <li class="deep">
+                    Planen reoptimaliseres når nye data ankommer — bare første
+                    steg sendes ut
+                  </li>
+                  <li class="deep">
+                    Reoptimaliserer typisk hvert <b>5.–15. minutt</b> og ved nye
+                    prognoser
+                  </li>
+                  <li>
+                    Robust mot prognosefeil via marginer og hyppig oppdatering
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="step rv">
+          <div class="step-rail">
+            <span class="sn"
+              ><svg viewBox="0 0 24 24"><use href="#ic-signal" /></svg>
+            </span>
+          </div>
+          <div class="step-body">
+            <div class="step-kick">Steg 04 · Styringssignaler</div>
+            <h3>Setpunkt ut til anlegget — trygt og sporbart</h3>
+            <p class="step-lead">
+              Optimaliseringens første tidssteg oversettes til konkrete setpunkt
+              og sendes til eksisterende automasjon. Anlegget utfører; Svalinn
+              Technology observerer resultatet og lukker sløyfen.
+            </p>
+            <div class="step-detail-grid">
+              <div class="dcard">
+                <h4>
+                  <span class="di"
+                    ><svg viewBox="0 0 24 24">
+                      <use href="#ic-automation" /></svg></span
+                  >Hva som sendes
+                </h4>
+                <ul>
+                  <li><b>Temperatur-setpunkt</b> innenfor godkjent bånd</li>
+                  <li>
+                    <b>Kapasitet / på-av</b> for kuldemaskin der det støttes
+                  </li>
+                  <li>Lade- / hold- / tøm-modus for termisk lager</li>
+                </ul>
+              </div>
+              <div class="dcard">
+                <h4>
+                  <span class="di"
+                    ><svg viewBox="0 0 24 24">
+                      <use href="#ic-shield" /></svg></span
+                  >Sikkerhet &amp; sporbarhet
+                </h4>
+                <ul>
+                  <li>
+                    <b>Failsafe:</b> ved brudd faller anlegget til siste gyldige
+                    modus
+                  </li>
+                  <li>
+                    Lokale regulatorer beholder alarm- og sikkerhetslogikk
+                  </li>
+                  <li class="deep">
+                    Hver kommando logges → full sporbarhet i kundeportalen
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="callout" style="margin-top: 22px">
+              <span class="ci"
+                ><svg viewBox="0 0 24 24"><use href="#ic-link" /></svg>
+              </span>
+              <p>
+                <b>Sløyfen lukkes:</b> resultatet av hvert tiltak måles og mates
+                tilbake til steg 01. Slik blir den termiske modellen og
+                prognosene bedre over tid — og mer data fra flere bygg gjør hele
+                systemet smartere.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DØGNET (SIM) ===================== -->
+    <section class="sec alt" id="dognet">
+      <div class="wrap">
+        <div class="sec-head rv sl">
+          <div class="kicker">
+            <span class="ko">05</span><span class="dash"></span>Et døgn i drift
+          </div>
+          <h2 class="h-xl">
+            Se optimaliseringen ta beslutninger time for time.
+          </h2>
+          <p class="lead">
+            Dra i tidslinjen eller spill av døgnet. Sammenlign et anlegg uten
+            styring mot Svalinn Technology — og se hvordan kulde flyttes fra
+            dyre timer til billige og solrike.
+          </p>
+        </div>
+
+        <div class="sim rv sr d1" id="sim">
+          <div class="sim-top">
+            <div class="sim-clock">
+              <span class="ct" id="simClock">13:00</span>
+              <span class="cp"
+                ><span class="ph" id="simPhase">SOL</span
+                ><span class="pd" id="simPhaseDesc"
+                  >Overskudd dekker drift — lader lager</span
+                ></span
+              >
+            </div>
+            <div class="sim-mode" id="simMode">
+              <button data-mode="svalinn" class="active">
+                Med Svalinn Technology
+              </button>
+              <button data-mode="naive">Uten styring</button>
+            </div>
+          </div>
+
+          <div class="sim-chart-wrap">
+            <svg
+              class="sim-chart"
+              id="simChart"
+              viewBox="0 0 1000 320"
+              preserveAspectRatio="none"
+            ></svg>
+          </div>
+
+          <div class="sim-legend">
+            <span class="sl"
+              ><span class="sw" style="background: #00629b"></span
+              >Spotpris</span
+            >
+            <span class="sl"
+              ><span class="sw" style="background: #ffb020"></span
+              >Solproduksjon</span
+            >
+            <span class="sl"
+              ><span class="sw" style="background: #59cbe8"></span
+              >Kuldeproduksjon</span
+            >
+            <span class="sl"
+              ><span
+                class="sw fill"
+                style="background: rgba(71, 215, 172, 0.5)"
+              ></span
+              >Lagernivå (SoC)</span
+            >
+            <span class="sl"
+              ><span class="sw" style="background: #ff6b4a"></span
+              >Nettkjøp</span
+            >
+          </div>
+
+          <div class="sim-track" id="simTrack">
+            <div class="axis"><div class="fill" id="simFill"></div></div>
+            <div class="marker" id="simMarker"></div>
+            <div class="ticks">
+              <span>00</span><span>06</span><span>12</span><span>18</span
+              ><span>24</span>
+            </div>
+          </div>
+
+          <div class="sim-readout">
+            <div class="ro decision">
+              <div class="rl">
+                <svg viewBox="0 0 24 24"><use href="#ic-brain" /></svg>
+                Beslutning
+              </div>
+              <div class="rv" id="roDecision">
+                Soloverskudd dekker drift og lader termisk lager. Null kjøp fra
+                nett.
+              </div>
+            </div>
+            <div class="ro">
+              <div class="rl">
+                <svg viewBox="0 0 24 24"><use href="#ic-price" /></svg>Spotpris
+              </div>
+              <div class="rv" id="roPrice">
+                0,45<span class="u">kr/kWh</span>
+              </div>
+            </div>
+            <div class="ro">
+              <div class="rl">
+                <svg viewBox="0 0 24 24"><use href="#ic-grid" /></svg>Nettkjøp
+              </div>
+              <div class="rv" id="roGrid">8<span class="u">kW</span></div>
+            </div>
+            <div class="ro">
+              <div class="rl">
+                <svg viewBox="0 0 24 24"><use href="#ic-cube" /></svg>Lagernivå
+              </div>
+              <div class="rv" id="roSoc">70<span class="u">%</span></div>
+            </div>
+          </div>
+
+          <div class="sim-controls">
+            <button class="play-btn" id="simPlay" aria-label="Spill av døgn">
+              <svg viewBox="0 0 24 24"><use href="#ic-play" /></svg>
+            </button>
+            <span class="sim-hint" id="simHint"
+              >Spill av for å se hele døgnet — eller dra i tidslinjen.</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== VERDI ===================== -->
+    <section class="sec" id="verdi">
+      <div class="wrap">
+        <div class="sec-head rv sr">
+          <div class="kicker">
+            <span class="ko">06</span><span class="dash"></span>Hvorfor det
+            lønner seg
+          </div>
+          <h2 class="h-xl">Målbar effekt — på samme anlegg.</h2>
+          <p class="lead">
+            Resultatene følger direkte av de tre kostnadsdriverne. Alt
+            dokumenteres automatisk, så effekten kan etterprøves.
+          </p>
+        </div>
+
+        <div class="value-grid">
+          <div class="vcard rv sl d1">
+            <div class="vic">
+              <svg viewBox="0 0 24 24"><use href="#ic-vsolar" /></svg>
+            </div>
+            <div class="vbig">Høyere</div>
+            <h4>Egenbruk av solstrøm</h4>
+            <p>
+              Fra <span class="numhl">35–40 %</span> til
+              <span class="numhl">80–100 %</span> — overskudd absorberes i det
+              termiske lageret i stedet for å selges billig ut på nettet.
+            </p>
+          </div>
+          <div class="vcard rv sl d2">
+            <div class="vic">
+              <svg viewBox="0 0 24 24"><use href="#ic-trenddown" /></svg>
+            </div>
+            <div class="vbig">Lavere</div>
+            <h4>Kjøp i dyre timer</h4>
+            <p>
+              Energi forflyttes fra pristoppene om morgenen og kvelden til
+              billige timer midt på dagen og natten.
+            </p>
+          </div>
+          <div class="vcard rv sl d3">
+            <div class="vic">
+              <svg viewBox="0 0 24 24"><use href="#ic-power" /></svg>
+            </div>
+            <div class="vbig">Kuttet</div>
+            <h4>Effekttopp</h4>
+            <p>
+              Lastutjevning holder det høyeste effektuttaket nede — som direkte
+              reduserer effekttariffen.
+            </p>
+          </div>
+          <div class="vcard rv sr d1">
+            <div class="vic">
+              <svg viewBox="0 0 24 24"><use href="#ic-cube2" /></svg>
+            </div>
+            <div class="vbig">Bygget</div>
+            <h4>som termisk batteri</h4>
+            <p>
+              Fleksibilitet du allerede eier, tatt i bruk uten ny
+              maskininvestering eller kjemiske batterier.
+            </p>
+          </div>
+          <div class="vcard rv sr d2">
+            <div class="vic">
+              <svg viewBox="0 0 24 24"><use href="#ic-leaf" /></svg>
+            </div>
+            <div class="vbig">Lavere</div>
+            <h4>CO₂-avtrykk</h4>
+            <p>
+              Mer fornybar egenprodusert strøm og mindre kjøp i timer med
+              skitten/dyr marginalkraft.
+            </p>
+          </div>
+          <div class="vcard rv sr d3">
+            <div class="vic">
+              <svg viewBox="0 0 24 24"><use href="#ic-doccheck" /></svg>
+            </div>
+            <div class="vbig">Dokumentert</div>
+            <h4>Effekt &amp; sporbarhet</h4>
+            <p>
+              Hver beslutning og besparelse logges og samles i kundeportalen —
+              etterprøvbart.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PORTAL / INTEGRASJON ===================== -->
+    <section class="sec alt" id="portal">
+      <div class="wrap">
+        <div class="split wide-left">
+          <div class="rv sl">
+            <div class="kicker">
+              <span class="ko">07</span><span class="dash"></span>Digital flate
+            </div>
+            <h2 class="h-xl" style="margin: 18px 0 18px">
+              Full oversikt — sanntid og dokumentasjon.
+            </h2>
+            <p class="lead">
+              Kundeportalen viser hva systemet gjør og hvorfor: sanntidsdrift,
+              solutnyttelse, effektprofil, besparelser og varsler. Alt som
+              ligger til grunn for en beslutning er sporbart.
+            </p>
+            <div class="chip-row" style="margin-top: 24px">
+              <span class="chip tag-data"
+                ><span class="d"></span>Vendor-agnostisk integrasjon</span
+              >
+              <span class="chip tag-energy"
+                ><span class="d"></span>Ingen ny maskininvestering</span
+              >
+              <span class="chip tag-control"
+                ><span class="d"></span>Skriver kun i godkjente bånd</span
+              >
+              <span class="chip tag-cold"
+                ><span class="d"></span>Failsafe ved brudd</span
+              >
+            </div>
+          </div>
+
+          <div class="portal-card rv sr d1">
+            <div class="portal-bar">
+              <span class="pl"
+                ><svg viewBox="0 0 24 24"><use href="#ic-portal" /></svg>
+              </span>
+              <div>
+                <b>Svalinn Kundeportal</b
+                ><span>sanntid · historikk · dokumentasjon</span>
+              </div>
+              <span class="live" style="margin-left: auto"
+                ><span class="dot"></span>LIVE</span
+              >
+            </div>
+            <div class="portal-body single">
+              <div class="pfeat">
+                <div class="pf">
+                  <span class="pi"
+                    ><svg viewBox="0 0 24 24"><use href="#ic-monitor" /></svg>
+                  </span>
+                  <div><b>Dashboard</b><span>Sanntid og historikk</span></div>
+                </div>
+                <div class="pf">
+                  <span class="pi"
+                    ><svg viewBox="0 0 24 24"><use href="#ic-insight" /></svg>
+                  </span>
+                  <div>
+                    <b>Innsikt</b><span>Energi, sol, effekt, drift</span>
+                  </div>
+                </div>
+                <div class="pf">
+                  <span class="pi"
+                    ><svg viewBox="0 0 24 24"><use href="#ic-doc" /></svg>
+                  </span>
+                  <div>
+                    <b>Rapporter</b><span>Automatisk dokumentasjon</span>
+                  </div>
+                </div>
+                <div class="pf">
+                  <span class="pi"
+                    ><svg viewBox="0 0 24 24"><use href="#ic-piggy" /></svg>
+                  </span>
+                  <div><b>Besparelser</b><span>Etterprøvbar effekt</span></div>
+                </div>
+                <div class="pf">
+                  <span class="pi"
+                    ><svg viewBox="0 0 24 24"><use href="#ic-bell" /></svg>
+                  </span>
+                  <div>
+                    <b>Varsler</b><span>Avvik, feil, optimalisering</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="sec" id="kontakt">
+      <div class="wrap">
+        <div class="cta rv sb">
+          <div
+            class="kicker"
+            style="justify-content: center; margin-bottom: 18px"
+          >
+            <span class="dash"></span>Neste steg<span class="dash"></span>
+          </div>
+          <h2 class="h-xl">Ta en teknisk gjennomgang av deres anlegg.</h2>
+          <p class="lead">
+            Vi kartlegger datakilder, SD-anlegg og termisk lagerpotensial — og
+            estimerer effekten på pris, effekttopp og solutnyttelse for nettopp
+            deres bygg.
+          </p>
+          <div class="cta-actions">
+            <a href="#" class="btn primary"
+              ><svg viewBox="0 0 24 24"><use href="#ic-spark" /></svg>Book
+              teknisk gjennomgang</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <div class="wrap">
+        <div class="foot-grid">
+          <span>SVALINN TECHNOLOGY · INTELLIGENT STYRING AV KULDEANLEGG</span>
+          <span>Teknisk fremstilling · illustrative tall</span>
+        </div>
+        <div class="foot-credit">
+          <span>Designet og utviklet av <b>TRE</b></span>
+        </div>
+      </div>
+    </footer>
+
+    <div id="tweaks-root"></div>
+
+    <script src="teknisk.js?v=33"></script>
+    <script>
+      /* failsafe: if external JS fails to load, never leave content hidden */
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          if (typeof window.__svalinnApply !== "function") {
+            document.querySelectorAll(".rv").forEach(function (e) {
+              e.classList.add("in");
+            });
+          }
+        }, 1800);
+      });
+    </script>
+
+    <!-- Tweaks panel (React + Babel) -->
+    <script
+      src="https://unpkg.com/react@18.3.1/umd/react.development.js"
+      integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"
+      integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"
+      integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/babel" src="tweaks-panel.jsx"></script>
+    <script type="text/babel">
+      const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/ {
+        accent: "#47D7AC",
+        depth: "full",
+        motion: true,
+      }; /*EDITMODE-END*/
+      function TweaksApp() {
+        const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+        React.useEffect(() => {
+          if (typeof window.__svalinnApply === "function") {
+            window.__svalinnApply({
+              accent: t.accent,
+              depth: t.depth,
+              motion: t.motion ? "on" : "off",
+            });
+          }
+        }, [t.accent, t.depth, t.motion]);
+        return (
+          <TweaksPanel title="Tweaks">
+            <TweakSection label="Visuell" />
+            <TweakColor
+              label="Aksentfarge"
+              value={t.accent}
+              options={["#47D7AC", "#59CBE8", "#00629B", "#008EAA"]}
+              onChange={(v) => setTweak("accent", v)}
+            />
+            <TweakToggle
+              label="Bevegelse / animasjon"
+              value={t.motion}
+              onChange={(v) => setTweak("motion", v)}
+            />
+            <TweakSection label="Innhold" />
+            <TweakRadio
+              label="Teknisk dybde"
+              value={t.depth}
+              options={["full", "enkel"]}
+              onChange={(v) => setTweak("depth", v)}
+            />
+          </TweaksPanel>
+        );
+      }
+      ReactDOM.createRoot(document.getElementById("tweaks-root")).render(
+        <TweaksApp />,
+      );
+    </script>
+  </body>
 </html>
