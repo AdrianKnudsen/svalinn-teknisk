@@ -80,7 +80,9 @@
       target = s.offsetTop - navOffset; // taller than viewport → start at top
     }
     const max = document.documentElement.scrollHeight - innerHeight;
-    target = Math.max(0, Math.min(target, max));
+    const allSecs = $$(".sec");
+    const isLast = s === allSecs[allSecs.length - 1];
+    target = isLast ? max : Math.max(0, Math.min(target, max));
     window.scrollTo({ top: target, behavior: "smooth" });
   }
   $$('a[href^="#"]').forEach((a) => {
@@ -611,8 +613,13 @@
         if (!s) return;
         const vh = innerHeight,
           h = s.offsetHeight;
+        const max = document.documentElement.scrollHeight - innerHeight;
         const target =
-          h <= vh ? s.offsetTop - (vh - h) / 2 : s.offsetTop - TOP_OFF;
+          i === items.length - 1
+            ? max //
+            : h <= vh
+              ? s.offsetTop - (vh - h) / 2
+              : s.offsetTop - TOP_OFF;
         animateScrollTo(target, 1300);
       });
     });
@@ -642,7 +649,7 @@
         });
         lastActive = active;
       }
-      // drive top nav from same logic — nothing active while in hero (so Problemet ≠ hero)
+      // drive top nav from same logic
       links.forEach((l) => l.classList.remove("active"));
       if (show) {
         const id = items[active].dataset.sec;

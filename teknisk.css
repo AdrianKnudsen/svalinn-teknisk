@@ -130,9 +130,7 @@ section {
   padding: 6.875rem 0;
   border-top: 1px solid var(--line-2);
 }
-/* Desktop: each section fills at least a viewport so neighbours fall out of
-   view (real spacing instead of fading), with content vertically centred and
-   its start snapping gently into place (proximity — tall sections scroll free). */
+
 @media (min-width: 1201px) {
   html {
     scroll-snap-type: y proximity;
@@ -143,6 +141,10 @@ section {
     flex-direction: column;
     justify-content: center;
     scroll-snap-align: start;
+  }
+
+  #kontakt {
+    scroll-snap-align: none;
   }
 }
 .sec.tight {
@@ -2401,7 +2403,7 @@ p {
    CTA / FOOTER
    ============================================================ */
 #kontakt {
-  min-height: 86vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
 }
