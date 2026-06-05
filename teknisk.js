@@ -524,7 +524,33 @@
     // init
     drawStatic();
     setHour(13);
-    // redraw on resize (viewBox scales but dot positions are fine; nothing needed)
+
+    if (!reduce) {
+      const readout = document.querySelector(".sim-readout");
+      if (readout) {
+        const vals = [roDec, roPrice, roGrid, roSoc];
+        vals.forEach((el) => {
+          el.style.opacity = "0";
+          el.style.transform = "translateY(0.5rem)";
+        });
+        const seen = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (!e.isIntersecting) return;
+              seen.unobserve(e.target);
+              vals.forEach((el, i) => {
+                el.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                el.style.transitionDelay = 0.35 + i * 0.06 + "s";
+                el.style.opacity = "1";
+                el.style.transform = "none";
+              });
+            });
+          },
+          { threshold: 0.25 },
+        );
+        seen.observe(readout);
+      }
+    }
   })();
 
   /* ============================================================
