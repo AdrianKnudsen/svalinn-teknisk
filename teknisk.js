@@ -19,7 +19,7 @@
         }
       });
     },
-    { threshold: 0.1, rootMargin: "0px 0px -30% 0px" },
+    { threshold: 0.1, rootMargin: "0px 0px -12% 0px" },
   );
   $$(".rv:not(.in)").forEach((el, i) => {
     /* below-hero reveals slide in from alternating sides as you scroll;
@@ -136,9 +136,9 @@
       pc = $("#socPct"),
       pw = $("#socPower");
     if (!fill) return;
-    const bottomY = 226,
-      fullH = 204,
-      topMin = 22;
+    const bottomY = 290,
+      fullH = 260,
+      topMin = 30;
     let t = 0;
     function frame() {
       t += 0.006;
@@ -616,7 +616,7 @@
         const max = document.documentElement.scrollHeight - innerHeight;
         const target =
           i === items.length - 1
-            ? max //
+            ? max
             : h <= vh
               ? s.offsetTop - (vh - h) / 2
               : s.offsetTop - TOP_OFF;

@@ -1312,8 +1312,8 @@
     <!-- ===================== TERMISK BATTERI ===================== -->
     <section class="sec alt" id="batteri">
       <div class="wrap">
-        <div class="split wide-right">
-          <div class="rv">
+        <div class="split wide-right battery-split">
+          <div class="rv sl battery-head">
             <div class="kicker">
               <span class="ko">03</span><span class="dash"></span>Termisk
               batteri
@@ -1321,6 +1321,9 @@
             <h2 class="h-xl" style="margin: 18px 0 20px">
               Fysikken: bygget lagrer kulde, ikke strøm.
             </h2>
+          </div>
+
+          <div class="rv sl d1 battery-text">
             <p class="lead" style="margin-bottom: 24px">
               I stedet for dyre kjemiske batterier brukes byggets egen termiske
               masse — varer, luft og konstruksjon — som lager. Svalinn
@@ -1362,9 +1365,9 @@
             </div>
           </div>
 
-          <!-- thermal store viz -->
-          <div class="rv d1">
-            <div class="hero-card" style="padding: 26px">
+          <!-- thermal store viz — box spans the body-text block (lead → last spec row) -->
+          <div class="rv sr d1 battery-viz">
+            <div class="hero-card soc-card" style="padding: 26px">
               <div class="hc-top">
                 <div class="hc-title">
                   <span class="ic"
@@ -1376,7 +1379,12 @@
                   ><span class="d"></span>termisk</span
                 >
               </div>
-              <svg viewBox="0 0 360 250" style="width: 100%; display: block">
+              <svg
+                class="soc-svg"
+                viewBox="0 0 360 320"
+                preserveAspectRatio="xMidYMid meet"
+                style="width: 100%; display: block"
+              >
                 <defs>
                   <linearGradient id="coldFill" x1="0" y1="0" x2="0" y2="1">
                     <stop offset="0" stop-color="#7fe3ff" />
@@ -1385,85 +1393,85 @@
                 </defs>
                 <!-- tank -->
                 <rect
-                  x="40"
-                  y="20"
-                  width="160"
-                  height="210"
-                  rx="16"
+                  x="30"
+                  y="26"
+                  width="168"
+                  height="268"
+                  rx="18"
                   fill="#06243f"
                   stroke="#2f6b92"
                   stroke-width="2"
                 />
                 <rect
                   id="socFill"
-                  x="44"
-                  y="120"
-                  width="152"
-                  height="106"
-                  rx="12"
+                  x="34"
+                  y="150"
+                  width="160"
+                  height="140"
+                  rx="14"
                   fill="url(#coldFill)"
                   opacity="0.9"
                 />
                 <text
-                  x="120"
-                  y="16"
+                  x="114"
+                  y="18"
                   text-anchor="middle"
                   fill="#7a93a8"
                   font-family="JetBrains Mono"
-                  font-size="10"
+                  font-size="11"
                 >
                   fulladet · −28 °C
                 </text>
                 <text
-                  x="120"
-                  y="246"
+                  x="114"
+                  y="312"
                   text-anchor="middle"
                   fill="#7a93a8"
                   font-family="JetBrains Mono"
-                  font-size="10"
+                  font-size="11"
                 >
                   utladet · −18 °C
                 </text>
                 <!-- band markers -->
                 <g stroke="rgba(255,255,255,.18)" stroke-dasharray="3 5">
-                  <line x1="44" y1="64" x2="196" y2="64" />
-                  <line x1="44" y1="170" x2="196" y2="170" />
+                  <line x1="34" y1="82" x2="194" y2="82" />
+                  <line x1="34" y1="216" x2="194" y2="216" />
                 </g>
                 <!-- side readout -->
-                <g transform="translate(222,40)" font-family="JetBrains Mono">
-                  <text x="0" y="0" fill="#7a93a8" font-size="11">
+                <g transform="translate(250,40)" font-family="JetBrains Mono">
+                  <text x="0" y="0" fill="#7a93a8" font-size="12">
                     tilstand
                   </text>
                   <text
                     id="socState"
                     x="0"
-                    y="26"
+                    y="30"
                     fill="#47D7AC"
-                    font-size="20"
+                    font-size="23"
                     font-weight="700"
                   >
                     LADER
                   </text>
-                  <text x="0" y="70" fill="#7a93a8" font-size="11">SoC</text>
+                  <text x="0" y="106" fill="#7a93a8" font-size="12">SoC</text>
                   <text
                     id="socPct"
                     x="0"
-                    y="96"
+                    y="148"
                     fill="#fff"
-                    font-size="30"
+                    font-size="40"
                     font-weight="700"
                   >
                     72%
                   </text>
-                  <text x="0" y="138" fill="#7a93a8" font-size="11">
+                  <text x="0" y="222" fill="#7a93a8" font-size="12">
                     kulde-effekt
                   </text>
                   <text
                     id="socPower"
                     x="0"
-                    y="162"
+                    y="252"
                     fill="#47D7AC"
-                    font-size="16"
+                    font-size="18"
                     font-weight="600"
                   >
                     +64 kW
@@ -1474,7 +1482,7 @@
           </div>
         </div>
 
-        <div class="callout rv d2" style="margin-top: 36px">
+        <div class="callout rv sb d2" style="margin-top: 36px">
           <span class="ci"
             ><svg viewBox="0 0 24 24"><use href="#ic-check" /></svg>
           </span>
