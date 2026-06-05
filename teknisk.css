@@ -36,7 +36,7 @@
     "Zona Pro", "Zonapro", "Montserrat", system-ui, -apple-system, sans-serif;
   --mono: "JetBrains Mono", "SF Mono", ui-monospace, Menlo, monospace;
 
-  --maxw: 73.75rem;
+  --maxw: clamp(73.75rem, 62rem + 14vw, 92rem);
   --anim: 1;
 }
 * {
@@ -45,6 +45,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5.25rem;
+  font-size: clamp(16px, 11.5px + 0.35vw, 20px);
 }
 html,
 body {
