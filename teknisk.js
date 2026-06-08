@@ -14,24 +14,24 @@
     (entries) => {
       entries.forEach((e) => {
         if (e.isIntersecting) {
-          e.target.classList.add("in");
+          e.target.classList.add("is-visible");
           io.unobserve(e.target);
         }
       });
     },
     { threshold: 0.1, rootMargin: "0px 0px -12% 0px" },
   );
-  $$(".rv:not(.in)").forEach((el, i) => {
+  $$(".reveal:not(.is-visible)").forEach((el, i) => {
     /* below-hero reveals slide in from alternating sides as you scroll;
        elements with an explicit sl/sr in markup keep their chosen side */
     if (
       !reduce &&
-      !el.classList.contains("sl") &&
-      !el.classList.contains("sr") &&
-      !el.classList.contains("sb") &&
-      !el.classList.contains("st")
+      !el.classList.contains("reveal-left") &&
+      !el.classList.contains("reveal-right") &&
+      !el.classList.contains("reveal-up") &&
+      !el.classList.contains("reveal-down")
     ) {
-      el.classList.add(i % 2 ? "sr" : "sl");
+      el.classList.add(i % 2 ? "reveal-right" : "reveal-left");
     }
     io.observe(el);
   });
@@ -389,10 +389,10 @@
     const elClock = $("#simClock"),
       elPhase = $("#simPhase"),
       elPhaseD = $("#simPhaseDesc");
-    const roDec = $("#roDecision"),
-      roPrice = $("#roPrice"),
-      roGrid = $("#roGrid"),
-      roSoc = $("#roSoc");
+    const roDec = $("#readoutDecision"),
+      roPrice = $("#readoutPrice"),
+      roGrid = $("#readoutGrid"),
+      roSoc = $("#readoutSoc");
     const fillBar = $("#simFill"),
       marker = $("#simMarker");
 
@@ -426,10 +426,10 @@
         roDec.textContent = phaseN(hi);
       }
       roPrice.innerHTML =
-        pr.toFixed(2).replace(".", ",") + '<span class="u">kr/kWh</span>';
-      roGrid.innerHTML = Math.round(gr) + '<span class="u">kW</span>';
-      roGrid.classList.toggle("hot", gr > 70);
-      roSoc.innerHTML = Math.round(so) + '<span class="u">%</span>';
+        pr.toFixed(2).replace(".", ",") + '<span class="unit">kr/kWh</span>';
+      roGrid.innerHTML = Math.round(gr) + '<span class="unit">kW</span>';
+      roGrid.classList.toggle("is-hot", gr > 70);
+      roSoc.innerHTML = Math.round(so) + '<span class="unit">%</span>';
       const f = (curHour / HRS) * 100;
       fillBar.style.width = f + "%";
       marker.style.left = f + "%";
@@ -567,9 +567,9 @@
   (function () {
     const tl = document.getElementById("timeline");
     if (!tl) return;
-    const items = [...tl.querySelectorAll(".tl-item")];
+    const items = [...tl.querySelectorAll(".timeline-item")];
     const secs = items.map((a) => document.getElementById(a.dataset.sec));
-    const fill = document.getElementById("tlFill");
+    const fill = document.getElementById("timelineFill");
     const hero = document.querySelector(".hero");
     secs.forEach((s) => {
       if (s) s.classList.add("journey");
